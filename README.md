@@ -28,10 +28,10 @@ weblog-alvian/
 
 ## Cara Upload ke GitHub & Deploy ke Netlify
 
-1. Buat repository kosong baru di GitHub (`https://github.com/new`), misalnya `portfolio-alvian`.
+1. Buat repository kosong baru di GitHub (`https://github.com/new`), misalnya `Portofolio-Alvian`.
 2. Hubungkan dan push dari folder ini:
    ```bash
-   git remote add origin https://github.com/AlvianFathan6305/portfolio-alvian.git
+   git remote add origin https://github.com/AlvianFathan6305/Portofolio-Alvian.git
    git push -u origin main
    ```
-3. Buka [Netlify](https://app.netlify.com/), pilih **Add new site → Import an existing project → GitHub**, pilih repository `portfolio-alvian`, lalu klik **Deploy site**.
+3. Buka [Netlify](https://app.netlify.com/), pilih **Add new site → Import an existing project → GitHub**, pilih repository `Portofolio-Alvian`, lalu klik **Deploy site**.
