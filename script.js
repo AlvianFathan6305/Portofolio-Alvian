@@ -175,15 +175,36 @@
 
   // Mobile Menu & Active Section
   const menuToggle = document.getElementById("menuToggle");
+  const iconMenu = document.getElementById("iconMenu");
+  const iconClose = document.getElementById("iconClose");
   const navLinks = document.getElementById("navLinks");
   const sections = document.querySelectorAll("main section[id]");
 
+  function setMenuOpen(isOpen) {
+    navLinks.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    if (iconMenu && iconClose) {
+      iconMenu.style.display = isOpen ? "none" : "block";
+      iconClose.style.display = isOpen ? "block" : "none";
+    }
+  }
+
   menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+    setMenuOpen(!navLinks.classList.contains("open"));
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => navLinks.classList.remove("open"));
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (
+      navLinks.classList.contains("open") &&
+      !navLinks.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      setMenuOpen(false);
+    }
   });
 
   window.addEventListener(
@@ -292,7 +313,7 @@
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString()
-        }).catch(() => {});
+        }).catch(() => { });
       }
 
       // 2. Send directly to Gmail inbox (alvianfathan6305@gmail.com)
