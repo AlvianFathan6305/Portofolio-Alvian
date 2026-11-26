@@ -322,61 +322,7 @@
   }
   tickTypewriter();
 
-  // 6. Interactive Developer Terminal
-  const terminalOutput = document.getElementById("terminalOutput");
-  const terminalCommands = {
-    whoami: `
-      <div class="cmd-line"><span class="cmd-prompt">alvian@mercubuana:~$</span> whoami --verbose</div>
-      <div>{</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"name"</span>: <span class="json-str">"Alvian Rizkya Fathan"</span>,</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"university"</span>: <span class="json-str">"Universitas Mercu Buana"</span>,</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"major"</span>: <span class="json-str">"Informatics Engineering"</span>,</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"gpa"</span>: <span class="json-num">3.64</span>,</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"location"</span>: <span class="json-str">"Jakarta Selatan, ID"</span>,</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"leadership"</span>: [<span class="json-str">"DPM Fasilkom"</span>, <span class="json-str">"BEM Fasilkom"</span>]</div>
-      <div>}</div>
-    `,
-    stack: `
-      <div class="cmd-line"><span class="cmd-prompt">alvian@mercubuana:~$</span> cat stack.json</div>
-      <div>{</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"backend"</span>: [<span class="json-str">"Laravel"</span>, <span class="json-str">"Node.js"</span>],</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"database"</span>: [<span class="json-str">"MySQL"</span>, <span class="json-str">"SQL"</span>],</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"frontend"</span>: [<span class="json-str">"HTML5"</span>, <span class="json-str">"CSS3"</span>, <span class="json-str">"JavaScript"</span>],</div>
-      <div>&nbsp;&nbsp;<span class="json-key">"deployment"</span>: [<span class="json-str">"GitHub"</span>, <span class="json-str">"Netlify"</span>]</div>
-      <div>}</div>
-    `,
-    network: `
-      <div class="cmd-line"><span class="cmd-prompt">alvian@mercubuana:~$</span> ifconfig --skills</div>
-      <div>eth0: flags=4163&lt;UP,BROADCAST,RUNNING&gt; mtu 1500</div>
-      <div>&nbsp;&nbsp;protocols : <span class="json-str">TCP/IP, DNS, DHCP</span></div>
-      <div>&nbsp;&nbsp;topology  : <span class="json-str">LAN / WAN Configuration</span></div>
-      <div>&nbsp;&nbsp;diagnostic: <span class="json-num">Network Troubleshooting [OK]</span></div>
-      <div>&nbsp;&nbsp;status    : <span class="json-num">0% packet loss — Ready for production</span></div>
-    `,
-    contact: `
-      <div class="cmd-line"><span class="cmd-prompt">alvian@mercubuana:~$</span> ping alvian</div>
-      <div>PING alvianrizkyafathan (Jakarta Selatan): 56 data bytes</div>
-      <div>&nbsp;&nbsp;email     : <span class="json-str">alvianfathan6305@gmail.com</span></div>
-      <div>&nbsp;&nbsp;github    : <span class="json-str">github.com/AlvianFathan6305</span></div>
-      <div>&nbsp;&nbsp;linkedin  : <span class="json-str">linkedin.com/in/alvianrizkyafathan</span></div>
-      <div>&nbsp;&nbsp;instagram : <span class="json-str">@alvianfathann</span> | tiktok: <span class="json-str">@alvianfathan</span></div>
-    `
-  };
-
-  function renderTerminal(cmdKey) {
-    terminalOutput.innerHTML = terminalCommands[cmdKey] || terminalCommands.whoami;
-  }
-  renderTerminal("whoami");
-
-  document.querySelectorAll(".term-cmd-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".term-cmd-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderTerminal(btn.getAttribute("data-cmd"));
-    });
-  });
-
-  // 7. Project Category Filter
+  // 6. Project Category Filter
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 

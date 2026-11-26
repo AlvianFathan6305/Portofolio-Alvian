@@ -711,11 +711,13 @@ section {
 }
 
 /* ==========================================================================
-   ABOUT & TERMINAL BENTO GRID
+   ABOUT & EDUCATION BENTO
    ========================================================================== */
 .about-bento {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
+  max-width: 940px;
+  margin: 0 auto;
   gap: 24px;
 }
 
@@ -804,95 +806,6 @@ section {
   position: absolute;
   left: 0;
   color: var(--accent-emerald);
-}
-
-/* Interactive Developer Terminal */
-.terminal-card {
-  background: #090d1a;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-card);
-}
-
-.terminal-header {
-  background: #11182d;
-  padding: 13px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-}
-
-.terminal-dots {
-  display: flex;
-  gap: 7px;
-}
-
-.t-dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-}
-.t-red { background: #ef4444; }
-.t-yellow { background: #f59e0b; }
-.t-green { background: #10b981; }
-
-.terminal-title {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: #94a3b8;
-}
-
-.terminal-body {
-  padding: 22px;
-  font-family: var(--font-mono);
-  font-size: 0.84rem;
-  line-height: 1.75;
-  color: #e2e8f0;
-  flex: 1;
-}
-
-.cmd-line {
-  color: #38bdf8;
-  margin-bottom: 6px;
-}
-.cmd-prompt {
-  color: #34d399;
-  font-weight: 700;
-}
-.json-key { color: #818cf8; }
-.json-str { color: #fcd34d; }
-.json-num { color: #34d399; }
-
-.terminal-tabs {
-  display: flex;
-  gap: 8px;
-  padding: 12px 18px;
-  background: #0d1326;
-  border-top: 1px solid rgba(148, 163, 184, 0.12);
-  flex-wrap: wrap;
-}
-
-.term-cmd-btn {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  background: rgba(56, 189, 248, 0.08);
-  color: #38bdf8;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.term-cmd-btn:hover,
-.term-cmd-btn.active {
-  background: #38bdf8;
-  color: #060913;
-  font-weight: 700;
 }
 
 /* ==========================================================================

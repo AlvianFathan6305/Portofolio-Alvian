@@ -11,7 +11,6 @@ Dibangun murni menggunakan **HTML5, CSS3, dan Vanilla JavaScript** tanpa framewo
 - **Desain Modern & Interaktif**: Glassmorphism Bento Grid, animasi kanvas topologi jaringan komputer, 3D tilt profile showcase, spotlight hover effect, dan scroll progress indicator.
 - **Mode Gelap & Terang (Dark/Light Mode)**: Mendukung pergantian tema secara instan dengan penyimpanan preferensi otomatis.
 - **Dukungan Dua Bahasa (ID / EN)**: Toggle Bahasa Indonesia dan Bahasa Inggris secara instan tanpa reload halaman.
-- **Terminal Developer Interaktif**: Simulasi command-line (`whoami`, `cat stack.json`, `ifconfig --skills`, `ping alvian`).
 - **Riwayat Organisasi & Pendidikan Lengkap**: Menampilkan rekam jejak di **DPM Fasilkom Mercu Buana** (termasuk Ketua Pelaksana Pemilu Raya 2026) dan **BEM Fasilkom Mercu Buana**.
 - **Sinkronisasi GitHub Real-Time**: Mengambil daftar repositori publik terbaru dari `@AlvianFathan6305` menggunakan GitHub REST API.
 - **Netlify Forms Ready**: Formulir kontak sudah terkonfigurasi dengan atribut `data-netlify="true"` serta dilengkapi konfigurasi header & caching di `netlify.toml`.
