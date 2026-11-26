@@ -267,12 +267,18 @@
   }
   loadGitHubRepos();
 
-  // Contact Form (Netlify Forms + Mailto Fallback)
+  // Contact Form (Direct to alvianfathan6305@gmail.com via FormSubmit + Netlify Forms backup + Mailto fallback)
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = currentLang === "id" ? "Mengirim..." : "Sending...";
+    formStatus.textContent = "";
+
     const formData = new FormData(contactForm);
     const name = formData.get("name");
     const email = formData.get("email");
@@ -280,21 +286,39 @@
     const message = formData.get("message");
 
     try {
-      const res = await fetch("/", {
+      // 1. Save backup to Netlify Forms when hosted on Netlify (non-blocking)
+      if (window.location.hostname.endsWith("netlify.app") || window.location.protocol.startsWith("http")) {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).catch(() => {});
+      }
+
+      // 2. Send directly to Gmail inbox (alvianfathan6305@gmail.com)
+      const res = await fetch("https://formsubmit.co/ajax/alvianfathan6305@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          Nama: name,
+          Email: email,
+          _replyto: email,
+          _subject: `[Portfolio Alvianfathan] ${subject}`,
+          Pesan: message,
+          _template: "table"
+        })
       });
 
-      if (res.ok && window.location.protocol.startsWith("http")) {
-        formStatus.textContent =
-          currentLang === "id"
-            ? "Pesan terkirim. Terima kasih telah menghubungi."
-            : "Message sent. Thank you for reaching out.";
-        contactForm.reset();
-        return;
-      }
-      throw new Error("Fallback to mailto");
+      if (!res.ok) throw new Error("Email endpoint unavailable");
+
+      formStatus.textContent =
+        currentLang === "id"
+          ? "Pesan berhasil dikirim ke alvianfathan6305@gmail.com."
+          : "Message sent directly to alvianfathan6305@gmail.com.";
+      contactForm.reset();
     } catch {
       const mailto = `mailto:alvianfathan6305@gmail.com?subject=${encodeURIComponent(
         subject
@@ -302,8 +326,11 @@
       window.location.href = mailto;
       formStatus.textContent =
         currentLang === "id"
-          ? "Membuka aplikasi email..."
-          : "Opening email client...";
+          ? "Membuka aplikasi email menuju alvianfathan6305@gmail.com..."
+          : "Opening email client to alvianfathan6305@gmail.com...";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
     }
   });
 

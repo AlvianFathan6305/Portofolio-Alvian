@@ -6,6 +6,7 @@ Dibangun menggunakan HTML, CSS, dan JavaScript murni tanpa framework eksternal, 
 
 ## Tautan
 
+- Email: mailto:alvianfathan6305@gmail.com
 - Instagram: https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr
 - GitHub: https://github.com/AlvianFathan6305
 - TikTok: https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S
