@@ -3,218 +3,301 @@
 
   const translations = {
     id: {
-      nav_about: "Profil",
+      nav_focus: "Fokus",
+      nav_about: "Pendidikan",
       nav_org: "Organisasi",
+      nav_projects: "Studi Kasus",
       nav_skills: "Keahlian",
-      nav_projects: "Proyek",
       nav_contact: "Kontak",
-      hero_eyebrow: "Jakarta Selatan, Indonesia · Teknik Informatika",
+      nav_cv: "CV (PDF)",
+      hero_status: "Terbuka untuk Magang & Posisi Entry-Level · Jakarta",
+      hero_role: "Backend Web Development & Computer Networking",
       hero_lead:
-        "Mahasiswa Teknik Informatika di <em>Universitas Mercu Buana</em> yang mendalami pengembangan backend, aplikasi web, dan jaringan komputer, sekaligus aktif berorganisasi di DPM dan BEM Fasilkom.",
-      btn_cv: "Unduh CV (PDF)",
-      btn_contact: "Hubungi Saya",
-      stat_gpa: "IPK Saat Ini (skala 4.00)",
-      stat_team: "Anggota Panitia Pemilu Dipimpin",
-      stat_prog: "Program Kerja Diawasi di DPM",
-      stat_event: "Peserta Event Didukung",
-      sec_about: "Profil & Pendidikan",
+        "Mahasiswa tingkat akhir Teknik Informatika di <em>Universitas Mercu Buana</em> (IPK 3.64/4.00). Saya merancang sistem backend berbasis Laravel & Node.js, struktur basis data SQL yang terukur, serta konfigurasi infrastruktur jaringan TCP/IP—didukung rekam jejak kepemimpinan nyata di tingkat fakultas.",
+      btn_explore: "Lihat Studi Kasus Teknis",
+      btn_cv: "Unduh CV",
+      stat_gpa: "IPK Kumulatif (Skala 4.00)",
+      stat_team: "Panitia Pemilu Raya Dipimpin",
+      stat_prog: "Program Kerja Diaudit & Diawasi",
+      stat_event: "Peserta Event Terkelola",
+      sec_focus: "Tiga Pilar Kompetensi",
+      focus_intro:
+        "Kombinasi yang saling melengkapi antara pengembangan aplikasi sisi server, pemahaman infrastruktur jaringan tempat aplikasi berjalan, serta ketertiban manajemen tim.",
+      p1_title: "Rekayasa Backend & Database",
+      p1_desc:
+        "Membangun logika bisnis sisi server dengan struktur MVC di Laravel dan layanan asinkron di Node.js, didukung skema tabel relasional MySQL yang ter-normalisasi dan aman.",
+      p2_title: "Infrastruktur & Diagnostik Jaringan",
+      p2_desc:
+        "Memahami cara kerja komunikasi data mulai dari pengalamatan IPv4/subnetting, perancangan LAN/WAN, otomasi DHCP & DNS, hingga penelusuran kendala konektivitas secara sistematis.",
+      p3_title: "Tata Kelola & Kepemimpinan Tim",
+      p3_desc:
+        "Terbiasa memimpin jalannya kepanitiaan strategis, mengawasi kepatuhan program kerja terhadap regulasi, serta menjaga komunikasi efektif antar-pemangku kepentingan.",
+      sec_about: "Pendidikan & Latar Belakang",
       about_p1:
-        "Saya menempuh studi S1 Teknik Informatika di Universitas Mercu Buana sejak 2023. Fokus utama saya berada pada pembuatan sistem di sisi server (backend), pengelolaan basis data relasional, serta instalasi dan pemecahan masalah jaringan komputer.",
+        "Sebagai mahasiswa Teknik Informatika, saya percaya bahwa pengembang perangkat lunak yang baik tidak hanya menulis kode yang berjalan, tetapi juga memahami bagaimana data disimpan secara efisien di basis data dan ditransmisikan melalui jaringan.",
       about_p2:
-        "Selain kegiatan perkuliahan dan pengerjaan proyek akademik menggunakan Laravel, Node.js, dan MySQL, saya terbiasa bekerja dalam tim serta mengelola jalannya program organisasi mahasiswa di tingkat fakultas melalui BEM dan DPM Fasilkom.",
-      edu_degree: "Sarjana Teknik Informatika (S1) — IPK 3.64 / 4.00",
+        "Selama masa studi di Universitas Mercu Buana, saya menjaga konsistensi akademik sembari mengambil peran aktif di lembaga eksekutif (BEM) dan legislatif/pengawasan (DPM) fakultas—melatih ketelitian analisis sekaligus kedisiplinan eksekusi di lapangan.",
+      edu_degree: "S1 Teknik Informatika (Bachelor of Informatics Engineering) · IPK 3.64 / 4.00",
       edu_period: "Sep 2023 – Sep 2027 (Target)",
-      edu_pt1: "Mengembangkan aplikasi berbasis web menggunakan bahasa pemrograman dan kerangka kerja modern.",
-      edu_pt2: "Mempelajari serta mempraktikkan konsep jaringan komputer, termasuk konfigurasi dan troubleshooting jaringan.",
-      edu_pt3: "Menyelesaikan proyek akademik yang mencakup pemrograman, basis data, kecerdasan buatan, dan pengembangan perangkat lunak.",
-      edu_pt4: "Aktif terlibat dalam organisasi mahasiswa untuk melatih kepemimpinan, komunikasi, dan pemecahan masalah.",
+      cw_label: "Fokus Studi:",
+      edu_pt1: "Merancang dan mengimplementasikan aplikasi web dinamis dengan pemisahan logika backend, frontend, dan relasi database.",
+      edu_pt2: "Mempraktikkan perancangan topologi jaringan komputer, pengalamatan IP, layanan server dasar, serta analisis gangguan jaringan.",
+      edu_pt3: "Menyelesaikan proyek kolaboratif rekayasa perangkat lunak, pengolahan basis data SQL, dan pengenalan kecerdasan buatan.",
       sec_org: "Riwayat Organisasi",
-      dpm_date: "Sep 2025 – Sekarang",
-      dpm_role: "Staff of Supervision Division · Ketua Pelaksana Pemilu Raya 2026",
+      org_hint:
+        "Progresi tanggung jawab dari eksekusi program di BEM hingga fungsi pengawasan & pimpinan kepanitiaan di DPM.",
+      dpm_date: "Sep 2025 – Sep 2026",
+      dpm_role: "Staff of Supervision Division & Ketua Pelaksana Pemilu Raya 2026",
+      dpm_impact_label: "Pencapaian Utama",
+      dpm_impact_text:
+        "Dipercaya memimpin 15+ anggota panitia sebagai Ketua Pelaksana Pemilu Raya Mahasiswa 2026 sekaligus mengaudit kepatuhan regulasi pada 10+ program kerja organisasi fakultas.",
       dpm_pt1:
-        "Memantau dan mengevaluasi lebih dari 10 program kerja organisasi mahasiswa agar berjalan sesuai regulasi yang berlaku.",
+        "Memantau dan mengevaluasi ketercapaian 10+ program kerja organisasi mahasiswa terhadap standar regulasi yang telah ditetapkan.",
       dpm_pt2:
-        "Mengawasi pelaksanaan lebih dari 10 kegiatan kemahasiswaan serta memberikan catatan evaluasi untuk perbaikan program.",
+        "Melakukan supervisi langsung pada 10+ aktivitas kemahasiswaan dan menyusun rekomendasi perbaikan berbasis temuan evaluasi di lapangan.",
       dpm_pt3:
-        "Menjabat sebagai Ketua Pelaksana Pemilu Raya 2026 (Chairperson of the 2026 General Election Committee), memimpin lebih dari 15 anggota panitia dari tahap perencanaan hingga pelaksanaan pemilihan mahasiswa.",
+        "Bertanggung jawab penuh atas perencanaan alur, pembagian tugas 15+ panitia, serta kelancaran operasional Pemilihan Umum Raya 2026 tingkat fakultas.",
       bem_role: "Staff of Student Interests and Talents Department",
+      bem_impact_label: "Pencapaian Utama",
+      bem_impact_text:
+        "Mengelola eksekusi 5+ program pengembangan bakat mahasiswa serta mendukung kelancaran operasional kolaborasi eksternal Highschoolfest 2024 bagi 200+ peserta.",
       bem_pt1:
-        "Mengkoordinasikan lebih dari 5 kegiatan mahasiswa yang berkaitan dengan penyaluran minat, bakat, dan kreativitas.",
+        "Merancang dan mengkoordinasikan 5+ kegiatan kemahasiswaan di bidang penyaluran minat, bakat, dan kreativitas mahasiswa.",
       bem_pt2:
-        "Bekerja sama dengan Highschoolfest 2024 sebagai media partner sekaligus relawan operasional acara yang diikuti lebih dari 200 peserta.",
+        "Menjalin kolaborasi media partner bersama Highschoolfest 2024 dan terjun langsung dalam tim operasional lapangan untuk melayani 200+ peserta.",
       bem_pt3:
-        "Berkolaborasi dengan lebih dari 10 rekan panitia dan perwakilan organisasi mahasiswa dalam menyelenggarakan agenda fakultas.",
-      sec_skills: "Keahlian",
-      skill_hint: "Ketuk item keahlian untuk melihat detail penerapannya.",
+        "Berkoordinasi aktif dengan 10+ rekan kepanitiaan lintas divisi dan perwakilan himpunan mahasiswa agar setiap agenda berjalan tepat waktu.",
+      sec_projects: "Studi Kasus & Kode",
+      proj_hint:
+        'Klik "Rincian Arsitektur" pada tiap kartu untuk membaca alur masalah, pendekatan teknis, dan hasilnya.',
+      filter_all: "Semua",
+      btn_case_open: "Rincian Arsitektur",
+      btn_case_close: "Tutup Rincian",
+      case_prob_label: "Permasalahan",
+      case_sol_label: "Pendekatan & Logika Teknis",
+      proj1_title: "Sistem Informasi & Manajemen Data Berbasis Web (MVC)",
+      proj1_desc:
+        "Pengembangan aplikasi pengelolaan data terpusat dengan autentikasi berlapis, validasi input sisi server, dan relasi tabel MySQL yang terstruktur.",
+      proj1_prob:
+        "Pencatatan data yang tidak terstandarisasi menyulitkan pencarian riwayat, rawan duplikasi entri, dan tidak memiliki pembagian hak akses pengguna.",
+      proj1_sol:
+        "Mendesain skema relasional (Primary/Foreign Key) di MySQL, memisahkan rute, controller, dan model menggunakan pola MVC Laravel, serta menerapkan middleware autentikasi dan sanitasi form request.",
+      proj2_title: "Perancangan Topologi Multi-Segmen LAN/WAN & Layanan Inti",
+      proj2_desc:
+        "Implementasi dan simulasi arsitektur jaringan tersegmen dengan pembagian subnet efisien, otomasi distribusi IP, serta prosedur diagnostik gangguan.",
+      proj2_prob:
+        "Jaringan skala beberapa divisi yang berada dalam satu broadcast domain tunggal rentan mengalami tabrakan IP statis dan sulit dilacak saat terjadi putus koneksi.",
+      proj2_sol:
+        "Menghitung alokasi blok IPv4 sesuai kapasitas tiap segmen, menghubungkan antar-jaringan melalui perutean LAN/WAN, mengaktifkan DHCP pool terpusat dan resolusi nama DNS, lalu memvalidasi jalur paket end-to-end.",
+      proj3_title: "Layanan API Node.js & Web Portfolio Statis Berperforma Tinggi",
+      proj3_desc:
+        "Eksplorasi komunikasi data asinkron berbasis JSON di Node.js serta pengembangan web portofolio mandiri tanpa beban library eksternal dengan alur CI/CD otomatis ke Netlify.",
+      proj3_prob:
+        "Banyak situs portofolio menjadi lambat di perangkat seluler akibat ketergantungan framework besar dan harus di-build ulang setiap ada pembaruan repositori GitHub.",
+      proj3_sol:
+        "Menggunakan HTML/CSS/JS murni berarsitektur modular, menarik data repositori secara dinamis lewat GitHub REST API menggunakan async/await, dan menghubungkan branch utama GitHub langsung ke pipeline produksi Netlify.",
+      gh_heading: "Sinkronisasi Repositori GitHub",
+      sec_skills: "Peta Keahlian",
+      skill_hint: "Pilih salah satu keahlian untuk melihat konteks penggunaannya secara spesifik.",
       skill_cat1: "Backend & Web",
       skill_cat2: "Jaringan Komputer",
-      skill_cat3: "Non-Teknis & Organisasi",
-      sec_projects: "Proyek & Kode",
-      filter_all: "Semua",
-      proj1_title: "Pengembangan Aplikasi Web & Basis Data",
-      proj1_desc:
-        "Pengerjaan proyek aplikasi web akademik yang berfokus pada perancangan skema relasi database SQL, autentikasi pengguna, dan pengelolaan endpoint backend.",
-      proj2_title: "Konfigurasi Topologi LAN/WAN & Layanan Jaringan",
-      proj2_desc:
-        "Praktikum dan simulasi perancangan pengalamatan IP, pembagian jaringan lokal maupun antarsegmen, pengaturan DHCP/DNS server, serta pengujian konektivitas.",
-      proj3_title: "Web Portfolio Pribadi",
-      proj3_desc:
-        "Situs dokumentasi profil, riwayat organisasi, dan repositori kode sumber yang dirancang ringan tanpa framework dan di-deploy melalui GitHub & Netlify.",
-      gh_heading: "Repositori Publik GitHub",
+      skill_cat3: "Manajerial & Tim",
       sec_contact: "Kontak",
+      contact_heading: "Mari Berdiskusi",
       contact_intro:
-        "Untuk keperluan magang, diskusi proyek web/jaringan, atau kerja sama kegiatan, silakan hubungi saya melalui email, WhatsApp, atau kanal media sosial berikut.",
+        "Saya terbuka untuk kesempatan magang (internship), posisi junior di bidang Backend / Jaringan Komputer, maupun kolaborasi proyek web. Pesan dari formulir di samping akan langsung terkirim ke inbox email saya.",
       btn_copy: "Salin",
-      form_name: "Nama",
-      form_email: "Email",
-      form_subject: "Subjek",
+      form_name: "Nama Lengkap",
+      form_email: "Alamat Email",
+      form_subject: "Subjek Keperluan",
       form_msg: "Pesan",
       form_submit: "Kirim Pesan"
     },
     en: {
-      nav_about: "Profile",
-      nav_org: "Organizations",
+      nav_focus: "Focus",
+      nav_about: "Education",
+      nav_org: "Leadership",
+      nav_projects: "Case Studies",
       nav_skills: "Skills",
-      nav_projects: "Projects",
       nav_contact: "Contact",
-      hero_eyebrow: "South Jakarta, Indonesia · Informatics Engineering",
+      nav_cv: "CV (PDF)",
+      hero_status: "Open to Internships & Entry-Level Roles · Jakarta",
+      hero_role: "Backend Web Development & Computer Networking",
       hero_lead:
-        "Undergraduate Informatics Engineering student at <em>Universitas Mercu Buana</em> focusing on backend systems, web applications, and computer networking, with active organizational roles in DPM and BEM Fasilkom.",
-      btn_cv: "Download CV (PDF)",
-      btn_contact: "Get in Touch",
-      stat_gpa: "Current GPA (out of 4.00)",
+        "Senior-year Informatics Engineering student at <em>Universitas Mercu Buana</em> (GPA 3.64/4.00). I build structured backend applications with Laravel & Node.js, relational SQL schemas, and TCP/IP network configurations—backed by hands-on faculty governance leadership.",
+      btn_explore: "View Technical Case Studies",
+      btn_cv: "Download CV",
+      stat_gpa: "Cumulative GPA (4.00 Scale)",
       stat_team: "Election Committee Members Led",
-      stat_prog: "Student Org Programs Supervised",
+      stat_prog: "Org Work Programs Audited",
       stat_event: "Event Participants Supported",
-      sec_about: "Profile & Education",
+      sec_focus: "Core Engineering Pillars",
+      focus_intro:
+        "A cohesive intersection between building server-side web systems, understanding the underlying network infrastructure they run on, and leading structured teams.",
+      p1_title: "Backend & Database Engineering",
+      p1_desc:
+        "Building clean MVC server logic with Laravel and asynchronous services in Node.js, backed by normalized, reliable MySQL relational schemas.",
+      p2_title: "Network Infrastructure & Diagnostics",
+      p2_desc:
+        "Practical command over IPv4 subnetting, LAN/WAN routing topologies, automated DHCP & DNS services, and systematic connectivity troubleshooting.",
+      p3_title: "Governance & Team Leadership",
+      p3_desc:
+        "Proven track record leading high-stakes student committees, auditing organizational compliance, and maintaining clear cross-team communication.",
+      sec_about: "Education & Background",
       about_p1:
-        "I have been pursuing a Bachelor's degree in Informatics Engineering at Universitas Mercu Buana since 2023. My primary focus is building server-side web applications, designing relational databases, and configuring computer networks.",
+        "As an Informatics Engineering student, I believe strong software engineering goes beyond writing application code—it requires understanding how data is modeled in databases and transported reliably across networks.",
       about_p2:
-        "Alongside coursework and academic projects built with Laravel, Node.js, and MySQL, I actively participate in faculty-level student governance and event operations through BEM and DPM Fasilkom.",
-      edu_degree: "Bachelor of Informatics Engineering — GPA 3.64 / 4.00",
+        "Throughout my studies at Universitas Mercu Buana, I have maintained strong academic performance while serving in both executive (BEM) and supervisory (DPM) student bodies—sharpening analytical rigor alongside operational discipline.",
+      edu_degree: "Bachelor of Informatics Engineering (S1) · GPA 3.64 / 4.00",
       edu_period: "Sep 2023 – Sep 2027 (Expected)",
-      edu_pt1: "Developed web-based applications using modern programming languages and frameworks.",
-      edu_pt2: "Learned and implemented computer networking concepts, including network configuration and troubleshooting.",
-      edu_pt3: "Worked on academic projects involving programming, databases, artificial intelligence, and software development.",
-      edu_pt4: "Actively participated in student organizations, developing leadership, teamwork, communication, and problem-solving skills.",
-      sec_org: "Organizations",
-      dpm_date: "Sep 2025 – Present",
-      dpm_role: "Staff of Supervision Division · Chairperson of 2026 General Election Committee",
+      cw_label: "Key Coursework:",
+      edu_pt1: "Designed and implemented dynamic web applications separating backend logic, frontend presentation, and relational SQL storage.",
+      edu_pt2: "Configured computer network topologies, IP addressing schemes, core network services, and systematic fault diagnostics.",
+      edu_pt3: "Completed collaborative projects spanning software engineering, database systems, and artificial intelligence fundamentals.",
+      sec_org: "Leadership Track",
+      org_hint:
+        "Clear progression from program execution in BEM to regulatory supervision and election committee leadership in DPM.",
+      dpm_date: "Sep 2025 – Sep 2026",
+      dpm_role: "Staff of Supervision Division & Chairperson of 2026 General Election Committee",
+      dpm_impact_label: "Key Impact",
+      dpm_impact_text:
+        "Entrusted to lead 15+ committee members as Chairperson of the 2026 Student General Election while auditing regulatory compliance across 10+ faculty organization programs.",
       dpm_pt1:
-        "Monitored and evaluated 10+ student organization work programs to ensure compliance with established regulations.",
+        "Monitored and evaluated 10+ student organization work programs against established governance regulations.",
       dpm_pt2:
-        "Supervised 10+ organizational activities and provided recommendations for program improvement.",
+        "Supervised 10+ student activities directly and delivered structured evaluation reports for continuous program improvement.",
       dpm_pt3:
-        "Served as Chairperson of the 2026 General Election Committee, leading 15+ committee members in planning and executing the student election.",
+        "Directed end-to-end planning, role delegation across 15+ staff, and live execution of the 2026 faculty-wide student election.",
       bem_role: "Staff of Student Interests and Talents Department",
+      bem_impact_label: "Key Impact",
+      bem_impact_text:
+        "Coordinated 5+ student talent initiatives and supported live event operations for 200+ participants during Highschoolfest 2024.",
       bem_pt1:
-        "Coordinated 5+ student activities related to interests, talents, and creativity.",
+        "Planned and coordinated 5+ student programs centered on developing interests, talents, and creative initiatives.",
       bem_pt2:
-        "Collaborated with Highschoolfest 2024 as a media partner and served as a volunteer, supporting event operations for 200+ participants.",
+        "Partnered with Highschoolfest 2024 as media partner and field operations volunteer serving 200+ attendees.",
       bem_pt3:
-        "Worked with 10+ committee members and student organization representatives to successfully conduct events and programs.",
-      sec_skills: "Skills",
-      skill_hint: "Click any skill below to inspect how I apply it.",
+        "Collaborated across 10+ committee members and student organization representatives to deliver faculty events on schedule.",
+      sec_projects: "Case Studies & Code",
+      proj_hint:
+        'Click "Architecture Breakdown" on any project to inspect the problem statement, technical approach, and logic.',
+      filter_all: "All",
+      btn_case_open: "Architecture Breakdown",
+      btn_case_close: "Hide Breakdown",
+      case_prob_label: "Problem Statement",
+      case_sol_label: "Technical Approach & Logic",
+      proj1_title: "Web-Based Information & Data Management System (MVC)",
+      proj1_desc:
+        "Centralized web application featuring role-based authentication, server-side validation, and normalized MySQL relational schemas.",
+      proj1_prob:
+        "Unstructured manual record-keeping caused data duplication, slow historical lookups, and lacked access-level separation.",
+      proj1_sol:
+        "Modeled relational tables with foreign-key constraints in MySQL, separated routing, controllers, and models via Laravel MVC, and enforced middleware authentication with strict request validation.",
+      proj2_title: "Multi-Segment LAN/WAN Topology & Core Network Services",
+      proj2_desc:
+        "Segmented network architecture simulation implementing efficient IPv4 subnetting, automated DHCP/DNS services, and diagnostic workflows.",
+      proj2_prob:
+        "Flat single-broadcast networks across multiple departments risk static IP conflicts and make isolating connectivity failures difficult.",
+      proj2_sol:
+        "Calculated subnet allocations per segment, configured inter-VLAN/LAN-WAN routing, deployed centralized DHCP pools and internal DNS resolution, and verified end-to-end packet paths.",
+      proj3_title: "Asynchronous Node.js Services & Zero-Dependency Web Portfolio",
+      proj3_desc:
+        "Lightweight JSON API exploration in Node.js alongside a fast, framework-free portfolio integrated with GitHub REST API and Netlify CI/CD.",
+      proj3_prob:
+        "Heavy frontend bundles degrade mobile load performance, while hardcoded project lists go stale whenever new repositories are pushed.",
+      proj3_sol:
+        "Engineered modular plain HTML/CSS/JS, fetched live repository metadata asynchronously from the GitHub REST API, and wired automated deployments from GitHub main to Netlify.",
+      gh_heading: "Live GitHub Repository Sync",
+      sec_skills: "Skills Matrix",
+      skill_hint: "Select any skill pill below to view specific engineering or leadership context.",
       skill_cat1: "Backend & Web",
       skill_cat2: "Computer Networking",
-      skill_cat3: "Soft Skills",
-      sec_projects: "Projects & Code",
-      filter_all: "All",
-      proj1_title: "Web Application & Relational Database Projects",
-      proj1_desc:
-        "Academic web engineering projects centered around SQL schema design, user authentication, and server-side application logic.",
-      proj2_title: "LAN/WAN Topology & Network Services Lab",
-      proj2_desc:
-        "Hands-on configuration of TCP/IP addressing, local and wide-area routing, DHCP/DNS services, and systematic connectivity troubleshooting.",
-      proj3_title: "Personal Portfolio Website",
-      proj3_desc:
-        "Lightweight static portfolio documenting organizational experience and public repositories, built with plain HTML, CSS, and JavaScript.",
-      gh_heading: "Public GitHub Repositories",
+      skill_cat3: "Leadership & Operations",
       sec_contact: "Contact",
+      contact_heading: "Let's Connect",
       contact_intro:
-        "For internship opportunities, backend/networking project discussions, or organizational collaborations, feel free to reach out via email, WhatsApp, or social channels.",
+        "Available for internship opportunities, entry-level Backend or Network Engineering roles, and web project collaborations. Form submissions go straight to my email inbox.",
       btn_copy: "Copy",
-      form_name: "Name",
-      form_email: "Email",
+      form_name: "Full Name",
+      form_email: "Email Address",
       form_subject: "Subject",
       form_msg: "Message",
       form_submit: "Send Message"
     }
   };
 
-  // Interactive Skill Descriptions (ID & EN)
   const skillDescriptions = {
     Laravel: {
-      id: "Digunakan untuk membangun backend aplikasi web berpola MVC, autentikasi pengguna, routing endpoint, dan integrasi database MySQL.",
-      en: "Used to build MVC web backends, user authentication flows, clean routing, and relational MySQL database integration."
+      id: "Digunakan untuk merancang arsitektur aplikasi web berpola MVC, autentikasi & otorisasi pengguna, validasi request, serta pengelolaan relasi database Eloquent/MySQL.",
+      en: "Used to architect MVC web applications, user authentication/authorization, request validation, and relational MySQL integration."
     },
     "Node.js": {
-      id: "Lingkungan runtime JavaScript sisi server untuk membuat layanan API ringan, pengelolaan request asinkron, dan logika aplikasi web.",
-      en: "Server-side JavaScript runtime used for lightweight REST APIs, asynchronous request handling, and backend logic."
+      id: "Runtime JavaScript sisi server untuk membangun REST endpoint ringan, pemrosesan data JSON asinkron, dan modularisasi logika backend.",
+      en: "Server-side JavaScript runtime for building lightweight REST endpoints, asynchronous JSON processing, and modular backend services."
     },
     MySQL: {
-      id: "Perancangan skema tabel relasional, foreign key, normalisasi data, serta optimasi penyimpanan data pada proyek aplikasi web.",
-      en: "Relational database schema design, normalization, foreign-key integrity, and structured data persistence for web apps."
+      id: "Perancangan skema database relasional ter-normalisasi, pengaturan indeks & foreign key, serta pemeliharaan integritas data aplikasi.",
+      en: "Normalized relational schema design, primary/foreign-key indexing, and reliable transactional data storage."
     },
     SQL: {
-      id: "Penulisan query terstruktur (JOIN, agregasi, filtering, dan sub-query) untuk pengolahan maupun pelaporan data aplikasi.",
-      en: "Structured querying (JOINs, aggregations, filtering, and subqueries) to retrieve and analyze application data."
+      id: "Penyusunan query relasional (JOIN multi-tabel, agregasi, pengelompokan, dan filtering) untuk kebutuhan fitur maupun laporan sistem.",
+      en: "Writing structured relational queries (multi-table JOINs, aggregations, filtering) for application features and reporting."
     },
     "HTML5 & CSS3": {
-      id: "Penyusunan struktur semantik halaman web dan tata letak responsif yang nyaman diakses baik di layar desktop maupun handphone.",
-      en: "Semantic markup and responsive layouts engineered for clarity and comfort across desktop and mobile screens."
+      id: "Penulisan markup semantik aksesibel dan sistem layout responsif modern (CSS Grid, Flexbox, Custom Properties) untuk desktop & seluler.",
+      en: "Semantic, accessible markup paired with responsive CSS Grid/Flexbox layouts optimized across desktop and mobile viewports."
     },
     JavaScript: {
-      id: "Pengembangan antarmuka interaktif berbasis DOM, integrasi REST API (fetch), serta validasi formulir tanpa ketergantungan library berat.",
-      en: "DOM-driven UI interactivity, asynchronous REST API integration, and client-side state handling in plain ES6+."
+      id: "Pengelolaan state antarmuka berbasis DOM, konsumsi REST API menggunakan Fetch/async-await, dan transisi UI ringan tanpa ketergantungan framework.",
+      en: "Clean DOM state management, asynchronous REST API consumption, and responsive UI interactions in modern ES6+."
     },
     Git: {
-      id: "Pengelolaan versi kode sumber, kolaborasi repositori di GitHub, serta alur deployment otomatis ke Netlify.",
-      en: "Source version control, GitHub repository management, and continuous deployment pipelines connected to Netlify."
+      id: "Manajemen riwayat kode sumber menggunakan percabangan Git, dokumentasi repositori GitHub, dan integrasi auto-deploy ke Netlify.",
+      en: "Version control workflows with Git, GitHub repository management, and automated CI/CD deployment pipelines on Netlify."
     },
     "TCP/IP": {
-      id: "Pemahaman model lapisan protokol jaringan, pengalamatan IPv4, subnetting, dan analisis komunikasi paket antarpiranti.",
-      en: "Practical understanding of IPv4 addressing, subnetting, packet routing, and core transport/network layer protocols."
+      id: "Pemahaman mendalam atas pengalamatan IPv4, perhitungan subnetting/VLSM, serta alur enkapsulasi paket pada layer jaringan & transpor.",
+      en: "Solid grasp of IPv4 addressing, subnetting calculations, and packet communication across network and transport layers."
     },
     "LAN / WAN": {
-      id: "Perancangan dan simulasi topologi jaringan lokal maupun antarsegmen menggunakan switch dan router.",
-      en: "Design and configuration of local and wide-area network topologies across switches, routers, and segmented subnets."
+      id: "Konfigurasi segmentasi jaringan lokal dan penghubungan antar-jaringan menggunakan perangkat switch serta perutean router.",
+      en: "Configuration of segmented local networks and inter-network routing across switches and routers."
     },
     DNS: {
-      id: "Konfigurasi sistem resolusi nama domain ke alamat IP serta pengelolaan record domain pada server maupun layanan hosting.",
-      en: "Configuration of domain name resolution services and DNS records across local lab servers and cloud hosts."
+      id: "Pengaturan pemetaan nama domain ke alamat IP (A/CNAME/NS records) baik pada simulasi server jaringan maupun manajemen domain produksi.",
+      en: "Configuring domain-to-IP resolution records across local network labs and production DNS management."
     },
     DHCP: {
-      id: "Pengaturan distribusi alamat IP dinamis, gateway, dan alokasi IP pool otomatis bagi perangkat klien di dalam jaringan.",
-      en: "Automated IP pool allocation, default gateway assignment, and lease management for networked client devices."
+      id: "Otomasi pendistribusian alamat IP dinamis, subnet mask, default gateway, dan DNS server untuk mencegah konflik IP pada klien.",
+      en: "Automated dynamic IP pool allocation, gateway assignment, and address lease management for client hosts."
     },
     Troubleshooting: {
-      id: "Identifikasi kendala konektivitas jaringan menggunakan pengujian ping, traceroute, pemeriksaan tabel routing, dan verifikasi konfigurasi.",
-      en: "Systematic diagnosis of connectivity issues through ping, route inspection, interface checks, and IP verification."
+      id: "Isolasi masalah jaringan secara runtut dari layer fisik hingga aplikasi menggunakan ping, traceroute, pemeriksaan IP/tabel routing, dan uji port.",
+      en: "Methodical fault isolation across layers using ping, traceroute, interface diagnostics, and routing table verification."
     },
     Leadership: {
-      id: "Teruji memimpin 15+ anggota panitia sebagai Ketua Pelaksana Pemilu Raya Fasilkom 2026 dari perencanaan hingga hari pemilihan.",
-      en: "Proven by leading 15+ committee members as Chairperson of the 2026 Student General Election from planning to execution."
+      id: "Memimpin 15+ panitia sebagai Ketua Pelaksana Pemilu Raya 2026, menetapkan timeline kerja, pembagian peran, dan pengambilan keputusan.",
+      en: "Directed 15+ committee members as Chairperson of the 2026 Student General Election, overseeing timelines and critical decisions."
     },
     Teamwork: {
-      id: "Terbiasa bekerja lintas divisi bersama rekan kepanitiaan, pengurus BEM, DPM, dan perwakilan himpunan mahasiswa.",
-      en: "Experienced collaborating across student departments, committees, and faculty organization representatives."
+      id: "Kolaborasi efektif bersama rekan satu divisi maupun lintas himpunan mahasiswa di lingkungan BEM dan DPM Fasilkom.",
+      en: "Cross-functional teamwork across faculty committees, student executives (BEM), and supervisory boards (DPM)."
     },
     Communication: {
-      id: "Menyampaikan hasil evaluasi pengawasan program kerja di DPM serta menjembatani koordinasi pihak internal maupun media partner.",
-      en: "Clear reporting of program evaluations at DPM and effective coordination with internal teams and external partners."
+      id: "Menyusun laporan evaluasi pengawasan program kerja secara objektif serta bernegosiasi dengan pihak eksternal/media partner.",
+      en: "Delivering clear supervisory audit feedback at DPM and coordinating smoothly with external event partners."
     },
     "Problem Solving": {
-      id: "Menyelesaikan kendala teknis kode/jaringan maupun kendala operasional lapangan secara terstruktur dan tenang.",
-      en: "Methodical troubleshooting across both technical debugging/networking labs and live organizational operations."
+      id: "Mengurai akar masalah secara logis—baik saat men-debug error query/jaringan maupun saat mengatasi kendala teknis acara di lapangan.",
+      en: "Breaking down root causes logically across backend/network debugging and live organizational problem-solving."
     },
     "Time Management": {
-      id: "Menjaga keseimbangan antara target akademik Teknik Informatika (IPK 3.64) dengan tanggung jawab aktif di organisasi fakultas.",
-      en: "Balancing Informatics Engineering coursework (3.64 GPA) alongside active leadership responsibilities in DPM & BEM."
+      id: "Menjaga performa akademik (IPK 3.64) tetap stabil sembari menjalankan amanah pengawasan organisasi dan kepanitiaan fakultas.",
+      en: "Sustaining a 3.64 GPA in Informatics Engineering alongside active supervisory and committee leadership roles."
     },
     "Event Management": {
-      id: "Mengkoordinasikan 5+ agenda minat bakat mahasiswa serta mendukung operasional acara dengan lebih dari 200 peserta.",
-      en: "Coordinating 5+ student talent programs and supporting live event operations for 200+ participants."
+      id: "Merancang konsep teknis acara, alur registrasi peserta, hingga koordinasi hari-H untuk kegiatan berskala 200+ partisipan.",
+      en: "End-to-end event planning,rundown coordination, and on-site execution for programs serving 200+ participants."
     }
   };
 
@@ -240,19 +323,46 @@
     applyTheme(htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark");
   });
 
-  // 2. Interactive Skill Pills Explorer
+  // 2. Interactive Case Study Architecture Drawers
+  function updateCaseButtonsLanguage() {
+    const dict = translations[currentLang];
+    document.querySelectorAll(".case-toggle").forEach((btn) => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      const span = btn.querySelector("span");
+      if (span) {
+        span.textContent = expanded ? dict.btn_case_close : dict.btn_case_open;
+      }
+    });
+  }
+
+  document.querySelectorAll(".case-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      const nextState = !expanded;
+      btn.setAttribute("aria-expanded", String(nextState));
+      const details = btn.nextElementSibling;
+      if (details) {
+        details.hidden = !nextState;
+      }
+      updateCaseButtonsLanguage();
+    });
+  });
+
+  // 3. Interactive Skill Pills Explorer
   const skillDetailBox = document.getElementById("skillDetailBox");
   const skillDetailName = document.getElementById("skillDetailName");
+  const skillDetailCat = document.getElementById("skillDetailCat");
   const skillDetailDesc = document.getElementById("skillDetailDesc");
   const skillPills = document.querySelectorAll(".skill-pill");
 
-  function renderSkillDetail(skillKey) {
+  function renderSkillDetail(skillKey, catLabel) {
     activeSkill = skillKey;
     const info = skillDescriptions[skillKey];
     if (!info || !skillDetailName || !skillDetailDesc) return;
     skillDetailBox.style.opacity = "0.45";
     setTimeout(() => {
       skillDetailName.textContent = skillKey;
+      if (skillDetailCat && catLabel) skillDetailCat.textContent = catLabel;
       skillDetailDesc.textContent = info[currentLang] || info.id;
       skillDetailBox.style.opacity = "1";
     }, 90);
@@ -262,11 +372,11 @@
     pill.addEventListener("click", () => {
       skillPills.forEach((p) => p.classList.remove("active"));
       pill.classList.add("active");
-      renderSkillDetail(pill.getAttribute("data-skill"));
+      renderSkillDetail(pill.getAttribute("data-skill"), pill.getAttribute("data-cat"));
     });
   });
 
-  // 3. Language Toggle
+  // 4. Language Toggle
   const langToggle = document.getElementById("langToggle");
   const langLabel = document.getElementById("langLabel");
 
@@ -282,9 +392,10 @@
       if (dict[key]) el.innerHTML = dict[key];
     });
 
-    if (skillDescriptions[activeSkill]) {
+    if (skillDescriptions[activeSkill] && skillDetailDesc) {
       skillDetailDesc.textContent = skillDescriptions[activeSkill][lang];
     }
+    updateCaseButtonsLanguage();
   }
   applyLanguage(currentLang);
 
@@ -292,7 +403,7 @@
     applyLanguage(currentLang === "id" ? "en" : "id");
   });
 
-  // 4. Mobile Menu, Reading Progress Bar & Active Section Spy
+  // 5. Mobile Menu, Reading Progress Bar & Active Section Spy
   const menuToggle = document.getElementById("menuToggle");
   const iconMenu = document.getElementById("iconMenu");
   const iconClose = document.getElementById("iconClose");
@@ -349,7 +460,7 @@
     { passive: true }
   );
 
-  // 5. Smooth Scroll Reveal & Metric Counter Animation
+  // 6. Smooth Scroll Reveal & Metric Counter Animation
   const revealEls = document.querySelectorAll(".reveal");
   let countersAnimated = false;
 
@@ -393,7 +504,7 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // 6. Smooth Project Category Filter
+  // 7. Smooth Project Category Filter
   const filterTabs = document.querySelectorAll(".filter-tab");
   const workItems = document.querySelectorAll(".work-item");
 
@@ -405,21 +516,12 @@
 
       workItems.forEach((item) => {
         const show = filter === "all" || item.getAttribute("data-category") === filter;
-        if (show) {
-          item.style.display = "block";
-          requestAnimationFrame(() => {
-            item.style.opacity = "1";
-            item.style.transform = "translateY(0)";
-          });
-        } else {
-          item.style.display = "none";
-          item.style.opacity = "0";
-        }
+        item.style.display = show ? "block" : "none";
       });
     });
   });
 
-  // 7. One-Click Copy Email Button
+  // 8. One-Click Copy Email Button
   const copyEmailBtn = document.getElementById("copyEmailBtn");
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener("click", async () => {
@@ -437,7 +539,7 @@
     });
   }
 
-  // 8. GitHub Repositories Index
+  // 9. GitHub Repositories Index
   const githubGrid = document.getElementById("githubReposGrid");
 
   async function loadGitHubRepos() {
@@ -486,7 +588,7 @@
   }
   loadGitHubRepos();
 
-  // 9. Contact Form (Direct to alvianfathan6305@gmail.com via FormSubmit + Netlify Forms backup)
+  // 10. Contact Form (Direct to alvianfathan6305@gmail.com via FormSubmit + Netlify Forms backup)
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
 

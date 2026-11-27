@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alvian Rizkya Fathan — Portfolio</title>
-  <meta name="description" content="Portfolio Alvian Rizkya Fathan, mahasiswa Teknik Informatika Universitas Mercu Buana dengan fokus Backend Development, Web Development, dan Computer Networking." />
+  <title>Alvian Rizkya Fathan — Backend &amp; Network Portfolio</title>
+  <meta name="description"
+    content="Portofolio profesional Alvian Rizkya Fathan — Mahasiswa Teknik Informatika Universitas Mercu Buana (IPK 3.64) dengan fokus Backend Development, Web Application, dan Computer Networking." />
   <meta name="author" content="Alvian Rizkya Fathan" />
-  <meta property="og:title" content="Alvian Rizkya Fathan" />
-  <meta property="og:description" content="Mahasiswa Teknik Informatika Universitas Mercu Buana — Backend Development, Web Development & Computer Networking." />
+  <meta property="og:title" content="Alvian Rizkya Fathan — Backend &amp; Network Portfolio" />
+  <meta property="og:description"
+    content="Informatics Engineering @ Universitas Mercu Buana · Backend Development (Laravel, Node.js, MySQL) &amp; Computer Networking (TCP/IP, LAN/WAN, DNS, DHCP)." />
   <meta property="og:image" content="assets/profile.jpg?v=2" />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap"
+    rel="stylesheet" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23141b1f'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='42' fill='%2365b8a3'>AF</text></svg>" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23131a1e'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='42' fill='%2364b6a1'>AF</text></svg>" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Subtle Top Reading Progress -->
   <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
 
   <!-- ==================== HEADER ==================== -->
@@ -33,34 +39,48 @@
 
       <nav aria-label="Navigasi Utama">
         <ul class="nav-links" id="navLinks">
-          <li><a href="#about" data-i18n="nav_about">Profil</a></li>
+          <li><a href="#focus" data-i18n="nav_focus">Fokus</a></li>
+          <li><a href="#about" data-i18n="nav_about">Pendidikan</a></li>
           <li><a href="#organization" data-i18n="nav_org">Organisasi</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Studi Kasus</a></li>
           <li><a href="#skills" data-i18n="nav_skills">Keahlian</a></li>
-          <li><a href="#projects" data-i18n="nav_projects">Proyek</a></li>
           <li><a href="#contact" data-i18n="nav_contact">Kontak</a></li>
         </ul>
       </nav>
 
       <div class="header-controls">
-        <button class="text-btn" id="langToggle" type="button" aria-label="Ganti Bahasa" title="ID / EN">
+        <a href="assets/CV-Alvian-Rizkya-Fathan.pdf" download="CV-Alvian-Rizkya-Fathan.pdf" class="header-cv-btn"
+          data-i18n="nav_cv">
+          CV (PDF)
+        </a>
+        <button class="text-btn" id="langToggle" type="button" aria-label="Ganti Bahasa"
+          title="Bahasa Indonesia / English">
           <span id="langLabel">ID</span>
         </button>
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="Ganti Tema Warna" title="Mode Gelap / Hangat Terang">
-          <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Ganti Tema Warna"
+          title="Ubah Tema Gelap / Terang">
+          <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+            </path>
           </svg>
-          <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-          <svg id="iconMenu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false"
+          aria-controls="navLinks">
+          <svg id="iconMenu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round">
             <line x1="4" y1="7" x2="20" y2="7"></line>
             <line x1="4" y1="12" x2="20" y2="12"></line>
             <line x1="4" y1="17" x2="20" y2="17"></line>
           </svg>
-          <svg id="iconClose" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:none;">
+          <svg id="iconClose" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" style="display:none;">
             <line x1="6" y1="6" x2="18" y2="18"></line>
             <line x1="6" y1="18" x2="18" y2="6"></line>
           </svg>
@@ -76,90 +96,200 @@
         <div class="hero-copy reveal">
           <div class="eyebrow-wrap">
             <span class="status-dot" aria-hidden="true"></span>
-            <p class="eyebrow" data-i18n="hero_eyebrow">Jakarta Selatan, Indonesia · Teknik Informatika</p>
+            <span class="eyebrow" data-i18n="hero_status">Terbuka untuk Magang &amp; Posisi Entry-Level · Jakarta
+            </span>
           </div>
 
           <h1 class="hero-name">Alvian Rizkya Fathan</h1>
+          <p class="hero-role" data-i18n="hero_role">Backend Web Development &amp; Computer Networking</p>
 
           <p class="hero-lead" data-i18n="hero_lead">
-            Mahasiswa Teknik Informatika di <em>Universitas Mercu Buana</em> yang mendalami pengembangan backend, aplikasi web, dan jaringan komputer, sekaligus aktif berorganisasi di DPM dan BEM Fasilkom.
+            Mahasiswa tingkat akhir Teknik Informatika di <em>Universitas Mercu Buana</em> (IPK 3.64/4.00). Saya
+            merancang sistem backend berbasis Laravel &amp; Node.js, struktur basis data SQL yang terukur, serta
+            konfigurasi infrastruktur jaringan TCP/IP—didukung rekam jejak kepemimpinan nyata di tingkat fakultas.
           </p>
 
           <div class="hero-actions">
-            <a href="assets/CV-Alvian-Rizkya-Fathan.pdf" download="CV-Alvian-Rizkya-Fathan.pdf" class="btn btn-solid">
-              <span data-i18n="btn_cv">Unduh CV (PDF)</span>
+            <a href="#projects" class="btn btn-solid">
+              <span data-i18n="btn_explore">Lihat Studi Kasus Teknis</span>
             </a>
-            <a href="#contact" class="btn btn-ghost" data-i18n="btn_contact">
-              Hubungi Saya
+            <a href="assets/CV-Alvian-Rizkya-Fathan.pdf" download="CV-Alvian-Rizkya-Fathan.pdf" class="btn btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span data-i18n="btn_cv">Unduh CV</span>
             </a>
           </div>
 
-          <ul class="inline-socials" aria-label="Tautan Media Sosial">
-            <li>
-              <a href="mailto:alvianfathan6305@gmail.com">alvianfathan6305@gmail.com <span class="ext-arrow">↗</span></a>
-            </li>
-            <li>
-              <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer">GitHub <span class="ext-arrow">↗</span></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer">LinkedIn <span class="ext-arrow">↗</span></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram <span class="ext-arrow">↗</span></a>
-            </li>
-            <li>
-              <a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank" rel="noopener noreferrer">TikTok <span class="ext-arrow">↗</span></a>
-            </li>
-          </ul>
+          <div class="social-strip" aria-label="Tautan Profil Resmi">
+            <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+              </svg>
+              <span>GitHub</span>
+              <span class="ext-arrow">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer"
+              class="social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
+              </svg>
+              <span>LinkedIn</span>
+              <span class="ext-arrow">↗</span>
+            </a>
+            <a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank"
+              rel="noopener noreferrer" class="social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z" />
+              </svg>
+              <span>Instagram</span>
+              <span class="ext-arrow">↗</span>
+            </a>
+            <a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank"
+              rel="noopener noreferrer" class="social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z" />
+              </svg>
+              <span>TikTok</span>
+              <span class="ext-arrow">↗</span>
+            </a>
+          </div>
         </div>
 
         <figure class="hero-portrait reveal">
-          <div class="portrait-wrap">
-            <img src="assets/profile.jpg?v=2" alt="Alvian Rizkya Fathan" loading="eager" />
+          <div class="portrait-frame">
+            <div class="portrait-wrap">
+              <img src="assets/profile.jpg?v=2" alt="Alvian Rizkya Fathan" loading="eager" />
+            </div>
+            <figcaption class="portrait-caption">
+              <div>
+                <div class="caption-name">Alvian Rizkya Fathan</div>
+                <div class="caption-loc">Jakarta Selatan, Indonesia</div>
+              </div>
+              <span class="mono caption-tag">Teknik Informatika</span>
+            </figcaption>
           </div>
-          <figcaption class="portrait-caption">
-            <span>Alvian Rizkya Fathan</span>
-            <span class="mono">DPM Fasilkom · Teknik Informatika</span>
-          </figcaption>
         </figure>
       </div>
 
-      <!-- Subtle Interactive Metrics Strip -->
+      <!-- Measurable Track Record Strip -->
       <div class="container metrics-strip reveal">
         <div class="metric-item">
           <span class="metric-val" data-count="3.64" data-decimals="2">3.64</span>
-          <span class="metric-label" data-i18n="stat_gpa">IPK Saat Ini (skala 4.00)</span>
+          <span class="metric-label" data-i18n="stat_gpa">IPK Kumulatif (Skala 4.00)</span>
         </div>
         <div class="metric-item">
           <span class="metric-val" data-count="15" data-suffix="+">15+</span>
-          <span class="metric-label" data-i18n="stat_team">Anggota Panitia Pemilu Dipimpin</span>
+          <span class="metric-label" data-i18n="stat_team">Panitia Pemilu Raya Dipimpin</span>
         </div>
         <div class="metric-item">
           <span class="metric-val" data-count="10" data-suffix="+">10+</span>
-          <span class="metric-label" data-i18n="stat_prog">Program Kerja Diawasi di DPM</span>
+          <span class="metric-label" data-i18n="stat_prog">Program Kerja Diaudit &amp; Diawasi</span>
         </div>
         <div class="metric-item">
           <span class="metric-val" data-count="200" data-suffix="+">200+</span>
-          <span class="metric-label" data-i18n="stat_event">Peserta Event Didukung</span>
+          <span class="metric-label" data-i18n="stat_event">Peserta Event Terkelola</span>
         </div>
       </div>
     </section>
 
-    <!-- ==================== 01. PROFIL & PENDIDIKAN ==================== -->
+    <!-- ==================== 01. NILAI & FOKUS UTAMA ==================== -->
+    <section class="section-block" id="focus">
+      <div class="container">
+        <div class="section-head-wide reveal">
+          <div>
+            <span class="section-num">01</span>
+            <h2 data-i18n="sec_focus"> Tiga Pilar Kompetensi</h2>
+          </div>
+          <p class="section-lead-text" data-i18n="focus_intro">
+            Kombinasi yang saling melengkapi antara pengembangan aplikasi sisi server, pemahaman infrastruktur jaringan
+            tempat aplikasi berjalan, serta ketertiban manajemen tim.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card reveal">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="p1_title">Rekayasa Backend &amp; Database</h3>
+            <p data-i18n="p1_desc">
+              Membangun logika bisnis sisi server dengan struktur MVC di Laravel dan layanan asinkron di Node.js,
+              didukung skema tabel relasional MySQL yang ter-normalisasi dan aman.
+            </p>
+            <div class="mono pillar-meta">Laravel · Node.js · MySQL · REST API</div>
+          </article>
+
+          <article class="pillar-card reveal">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="p2_title">Infrastruktur &amp; Diagnostik Jaringan</h3>
+            <p data-i18n="p2_desc">
+              Memahami cara kerja komunikasi data mulai dari pengalamatan IPv4/subnetting, perancangan LAN/WAN, otomasi
+              DHCP &amp; DNS, hingga penelusuran kendala konektivitas secara sistematis.
+            </p>
+            <div class="mono pillar-meta">TCP/IP · LAN/WAN · DNS · DHCP</div>
+          </article>
+
+          <article class="pillar-card reveal">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="p3_title">Tata Kelola &amp; Kepemimpinan Tim</h3>
+            <p data-i18n="p3_desc">
+              Terbiasa memimpin jalannya kepanitiaan strategis, mengawasi kepatuhan program kerja terhadap regulasi,
+              serta menjaga komunikasi efektif antar-pemangku kepentingan.
+            </p>
+            <div class="mono pillar-meta">Leadership · Supervision · Problem Solving</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02. LATAR BELAKANG & PENDIDIKAN ==================== -->
     <section class="section-block" id="about">
       <div class="container split-grid">
         <div class="section-label reveal">
-          <span class="section-num">01</span>
-          <h2 data-i18n="sec_about">Profil &amp; Pendidikan</h2>
+          <span class="section-num">02</span>
+          <h2 data-i18n="sec_about">Pendidikan &amp; Latar Belakang</h2>
         </div>
 
         <div class="section-content reveal">
           <div class="prose">
             <p data-i18n="about_p1">
-              Saya menempuh studi S1 Teknik Informatika di Universitas Mercu Buana sejak 2023. Fokus utama saya berada pada pembuatan sistem di sisi server (backend), pengelolaan basis data relasional, serta instalasi dan pemecahan masalah jaringan komputer.
+              Sebagai mahasiswa Teknik Informatika, saya percaya bahwa pengembang perangkat lunak yang baik tidak hanya
+              menulis kode yang berjalan, tetapi juga memahami bagaimana data disimpan secara efisien di basis data dan
+              ditransmisikan melalui jaringan.
             </p>
             <p data-i18n="about_p2">
-              Selain kegiatan perkuliahan dan pengerjaan proyek akademik menggunakan Laravel, Node.js, dan MySQL, saya terbiasa bekerja dalam tim serta mengelola jalannya program organisasi mahasiswa di tingkat fakultas melalui BEM dan DPM Fasilkom.
+              Selama masa studi di Universitas Mercu Buana, saya menjaga konsistensi akademik sembari mengambil peran
+              aktif di lembaga eksekutif (BEM) dan legislatif/pengawasan (DPM) fakultas—melatih ketelitian analisis
+              sekaligus kedisiplinan eksekusi di lapangan.
             </p>
           </div>
 
@@ -167,53 +297,80 @@
             <div class="edu-header">
               <div>
                 <h3>Universitas Mercu Buana</h3>
-                <p class="edu-sub" data-i18n="edu_degree">Sarjana Teknik Informatika (S1) — IPK 3.64 / 4.00</p>
+                <p class="edu-sub" data-i18n="edu_degree">S1 Teknik Informatika (Bachelor of Informatics Engineering) ·
+                  IPK 3.64 / 4.00</p>
               </div>
               <span class="mono badge-soft" data-i18n="edu_period">Sep 2023 – Sep 2027 (Target)</span>
             </div>
+
+            <div class="coursework-tags">
+              <span class="cw-label" data-i18n="cw_label">Fokus Studi:</span>
+              <span>Web Programming</span>
+              <span>Database Systems</span>
+              <span>Computer Networks</span>
+              <span>Software Engineering</span>
+              <span>Artificial Intelligence</span>
+            </div>
+
             <ul class="clean-list">
-              <li data-i18n="edu_pt1">Mengembangkan aplikasi berbasis web menggunakan bahasa pemrograman dan kerangka kerja modern.</li>
-              <li data-i18n="edu_pt2">Mempelajari serta mempraktikkan konsep jaringan komputer, termasuk konfigurasi dan troubleshooting jaringan.</li>
-              <li data-i18n="edu_pt3">Menyelesaikan proyek akademik yang mencakup pemrograman, basis data, kecerdasan buatan, dan pengembangan perangkat lunak.</li>
-              <li data-i18n="edu_pt4">Aktif terlibat dalam organisasi mahasiswa untuk melatih kepemimpinan, komunikasi, dan pemecahan masalah.</li>
+              <li data-i18n="edu_pt1">Merancang dan mengimplementasikan aplikasi web dinamis dengan pemisahan logika
+                backend, frontend, dan relasi database.</li>
+              <li data-i18n="edu_pt2">Mempraktikkan perancangan topologi jaringan komputer, pengalamatan IP, layanan
+                server dasar, serta analisis gangguan jaringan.</li>
+              <li data-i18n="edu_pt3">Menyelesaikan proyek kolaboratif rekayasa perangkat lunak, pengolahan basis data
+                SQL, dan pengenalan kecerdasan buatan.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== 02. RIWAYAT ORGANISASI ==================== -->
+    <!-- ==================== 03. PROGRESI RIWAYAT ORGANISASI ==================== -->
     <section class="section-block" id="organization">
       <div class="container split-grid">
         <div class="section-label reveal">
-          <span class="section-num">02</span>
+          <span class="section-num">03</span>
           <h2 data-i18n="sec_org">Riwayat Organisasi</h2>
+          <p class="label-hint" data-i18n="org_hint">Progresi tanggung jawab dari eksekusi program di BEM hingga fungsi
+            pengawasan &amp; pimpinan kepanitiaan di DPM.</p>
         </div>
 
         <div class="section-content">
           <div class="experience-timeline">
             <!-- DPM -->
             <article class="exp-card reveal">
-              <div class="exp-dot current" aria-hidden="true"></div>
+              <div class="exp-dot" aria-hidden="true"></div>
               <div class="exp-top">
                 <div>
                   <h3>DPM Fasilkom Mercu Buana</h3>
-                  <p class="exp-role" data-i18n="dpm_role">Staff of Supervision Division · Ketua Pelaksana Pemilu Raya 2026</p>
+                  <p class="exp-role" data-i18n="dpm_role">Staff of Supervision Division &amp; Ketua Pelaksana Pemilu
+                    Raya 2026</p>
                 </div>
                 <div class="exp-meta">
-                  <span class="mono badge-active" data-i18n="dpm_date">Sep 2025 – Sekarang</span>
+                  <span class="mono badge-soft" data-i18n="dpm_date">Sep 2025 – Sep 2026</span>
                   <span class="exp-loc">Jakarta, Indonesia</span>
                 </div>
               </div>
+
+              <div class="impact-callout">
+                <span class="mono impact-tag" data-i18n="dpm_impact_label">Pencapaian Utama</span>
+                <p data-i18n="dpm_impact_text">Dipercaya memimpin 15+ anggota panitia sebagai Ketua Pelaksana Pemilu
+                  Raya Mahasiswa 2026 sekaligus mengaudit kepatuhan regulasi pada 10+ program kerja organisasi fakultas.
+                </p>
+              </div>
+
               <ul class="clean-list">
                 <li data-i18n="dpm_pt1">
-                  Memantau dan mengevaluasi lebih dari 10 program kerja organisasi mahasiswa agar berjalan sesuai regulasi yang berlaku.
+                  Memantau dan mengevaluasi ketercapaian 10+ program kerja organisasi mahasiswa terhadap standar
+                  regulasi yang telah ditetapkan.
                 </li>
                 <li data-i18n="dpm_pt2">
-                  Mengawasi pelaksanaan lebih dari 10 kegiatan kemahasiswaan serta memberikan catatan evaluasi untuk perbaikan program.
+                  Melakukan supervisi langsung pada 10+ aktivitas kemahasiswaan dan menyusun rekomendasi perbaikan
+                  berbasis temuan evaluasi di lapangan.
                 </li>
                 <li data-i18n="dpm_pt3">
-                  Menjabat sebagai Ketua Pelaksana Pemilu Raya 2026 (Chairperson of the 2026 General Election Committee), memimpin lebih dari 15 anggota panitia dari tahap perencanaan hingga pelaksanaan pemilihan mahasiswa.
+                  Bertanggung jawab penuh atas perencanaan alur, pembagian tugas 15+ panitia, serta kelancaran
+                  operasional Pemilihan Umum Raya 2026 tingkat fakultas.
                 </li>
               </ul>
             </article>
@@ -231,15 +388,25 @@
                   <span class="exp-loc">Jakarta, Indonesia</span>
                 </div>
               </div>
+
+              <div class="impact-callout">
+                <span class="mono impact-tag" data-i18n="bem_impact_label">Pencapaian Utama</span>
+                <p data-i18n="bem_impact_text">Mengelola eksekusi 5+ program pengembangan bakat mahasiswa serta
+                  mendukung kelancaran operasional kolaborasi eksternal Highschoolfest 2024 bagi 200+ peserta.</p>
+              </div>
+
               <ul class="clean-list">
                 <li data-i18n="bem_pt1">
-                  Mengkoordinasikan lebih dari 5 kegiatan mahasiswa yang berkaitan dengan penyaluran minat, bakat, dan kreativitas.
+                  Merancang dan mengkoordinasikan 5+ kegiatan kemahasiswaan di bidang penyaluran minat, bakat, dan
+                  kreativitas mahasiswa.
                 </li>
                 <li data-i18n="bem_pt2">
-                  Bekerja sama dengan Highschoolfest 2024 sebagai media partner sekaligus relawan operasional acara yang diikuti lebih dari 200 peserta.
+                  Menjalin kolaborasi media partner bersama Highschoolfest 2024 dan terjun langsung dalam tim
+                  operasional lapangan untuk melayani 200+ peserta.
                 </li>
                 <li data-i18n="bem_pt3">
-                  Berkolaborasi dengan lebih dari 10 rekan panitia dan perwakilan organisasi mahasiswa dalam menyelenggarakan agenda fakultas.
+                  Berkoordinasi aktif dengan 10+ rekan kepanitiaan lintas divisi dan perwakilan himpunan mahasiswa agar
+                  setiap agenda berjalan tepat waktu.
                 </li>
               </ul>
             </article>
@@ -248,70 +415,14 @@
       </div>
     </section>
 
-    <!-- ==================== 03. KEAHLIAN INTERAKTIF ==================== -->
-    <section class="section-block" id="skills">
-      <div class="container split-grid">
-        <div class="section-label reveal">
-          <span class="section-num">03</span>
-          <h2 data-i18n="sec_skills">Keahlian</h2>
-          <p class="label-hint" data-i18n="skill_hint">Ketuk item keahlian untuk melihat detail penerapannya.</p>
-        </div>
-
-        <div class="section-content reveal">
-          <div class="skill-detail-box" id="skillDetailBox" aria-live="polite">
-            <span class="skill-detail-name" id="skillDetailName">Laravel</span>
-            <p class="skill-detail-desc" id="skillDetailDesc">
-              Digunakan untuk membangun backend aplikasi web berpola MVC, autentikasi pengguna, routing endpoint, dan integrasi database MySQL.
-            </p>
-          </div>
-
-          <div class="spec-table">
-            <div class="spec-row">
-              <div class="spec-title" data-i18n="skill_cat1">Backend &amp; Web</div>
-              <div class="spec-items">
-                <button type="button" class="skill-pill active" data-skill="Laravel">Laravel</button>
-                <button type="button" class="skill-pill" data-skill="Node.js">Node.js</button>
-                <button type="button" class="skill-pill" data-skill="MySQL">MySQL</button>
-                <button type="button" class="skill-pill" data-skill="SQL">SQL</button>
-                <button type="button" class="skill-pill" data-skill="HTML5 & CSS3">HTML5 &amp; CSS3</button>
-                <button type="button" class="skill-pill" data-skill="JavaScript">JavaScript</button>
-                <button type="button" class="skill-pill" data-skill="Git">Git &amp; GitHub</button>
-              </div>
-            </div>
-
-            <div class="spec-row">
-              <div class="spec-title" data-i18n="skill_cat2">Jaringan Komputer</div>
-              <div class="spec-items">
-                <button type="button" class="skill-pill" data-skill="TCP/IP">TCP/IP</button>
-                <button type="button" class="skill-pill" data-skill="LAN / WAN">LAN / WAN</button>
-                <button type="button" class="skill-pill" data-skill="DNS">DNS</button>
-                <button type="button" class="skill-pill" data-skill="DHCP">DHCP</button>
-                <button type="button" class="skill-pill" data-skill="Troubleshooting">Network Troubleshooting</button>
-              </div>
-            </div>
-
-            <div class="spec-row">
-              <div class="spec-title" data-i18n="skill_cat3">Non-Teknis &amp; Organisasi</div>
-              <div class="spec-items">
-                <button type="button" class="skill-pill" data-skill="Leadership">Leadership</button>
-                <button type="button" class="skill-pill" data-skill="Teamwork">Teamwork</button>
-                <button type="button" class="skill-pill" data-skill="Communication">Communication</button>
-                <button type="button" class="skill-pill" data-skill="Problem Solving">Problem Solving</button>
-                <button type="button" class="skill-pill" data-skill="Time Management">Time Management</button>
-                <button type="button" class="skill-pill" data-skill="Event Management">Event Management</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 04. PROYEK & GITHUB ==================== -->
+    <!-- ==================== 04. STUDI KASUS TEKNIS & REPOSITORI ==================== -->
     <section class="section-block" id="projects">
       <div class="container split-grid">
         <div class="section-label reveal">
           <span class="section-num">04</span>
-          <h2 data-i18n="sec_projects">Proyek &amp; Kode</h2>
+          <h2 data-i18n="sec_projects">Studi Kasus &amp; Kode</h2>
+          <p class="label-hint" data-i18n="proj_hint">Klik "Rincian Arsitektur" pada tiap kartu untuk membaca alur
+            masalah, pendekatan teknis, dan hasilnya.</p>
         </div>
 
         <div class="section-content reveal">
@@ -322,41 +433,124 @@
           </div>
 
           <div class="work-list" id="workList">
+            <!-- Case Study 1 -->
             <article class="work-item" data-category="backend">
               <div class="work-top">
-                <h3 data-i18n="proj1_title">Pengembangan Aplikasi Web &amp; Basis Data</h3>
-                <span class="mono work-stack">Laravel · Node.js · MySQL</span>
+                <div>
+                  <span class="mono case-domain">Backend Architecture</span>
+                  <h3 data-i18n="proj1_title">Sistem Informasi &amp; Manajemen Data Berbasis Web (MVC)</h3>
+                </div>
+                <span class="mono work-stack">Laravel · MySQL · SQL</span>
               </div>
-              <p data-i18n="proj1_desc">
-                Pengerjaan proyek aplikasi web akademik yang berfokus pada perancangan skema relasi database SQL, autentikasi pengguna, dan pengelolaan endpoint backend.
+              <p class="work-summary" data-i18n="proj1_desc">
+                Pengembangan aplikasi pengelolaan data terpusat dengan autentikasi berlapis, validasi input sisi server,
+                dan relasi tabel MySQL yang terstruktur.
               </p>
+              <button type="button" class="case-toggle" aria-expanded="false">
+                <span data-i18n="btn_case_open">Rincian Arsitektur</span>
+                <svg class="chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="case-details" hidden>
+                <div class="case-grid">
+                  <div>
+                    <h4 data-i18n="case_prob_label">Permasalahan</h4>
+                    <p data-i18n="proj1_prob">Pencatatan data yang tidak terstandarisasi menyulitkan pencarian riwayat,
+                      rawan duplikasi entri, dan tidak memiliki pembagian hak akses pengguna.</p>
+                  </div>
+                  <div>
+                    <h4 data-i18n="case_sol_label">Pendekatan &amp; Logika Teknis</h4>
+                    <p data-i18n="proj1_sol">Mendesain skema relasional (Primary/Foreign Key) di MySQL, memisahkan rute,
+                      controller, dan model menggunakan pola MVC Laravel, serta menerapkan middleware autentikasi dan
+                      sanitasi form request.</p>
+                  </div>
+                </div>
+              </div>
             </article>
 
+            <!-- Case Study 2 -->
             <article class="work-item" data-category="network">
               <div class="work-top">
-                <h3 data-i18n="proj2_title">Konfigurasi Topologi LAN/WAN &amp; Layanan Jaringan</h3>
-                <span class="mono work-stack">TCP/IP · DNS · DHCP</span>
+                <div>
+                  <span class="mono case-domain">Network Infrastructure</span>
+                  <h3 data-i18n="proj2_title">Perancangan Topologi Multi-Segmen LAN/WAN &amp; Layanan Inti</h3>
+                </div>
+                <span class="mono work-stack">TCP/IP · DNS · DHCP · Routing</span>
               </div>
-              <p data-i18n="proj2_desc">
-                Praktikum dan simulasi perancangan pengalamatan IP, pembagian jaringan lokal maupun antarsegmen, pengaturan DHCP/DNS server, serta pengujian konektivitas.
+              <p class="work-summary" data-i18n="proj2_desc">
+                Implementasi dan simulasi arsitektur jaringan tersegmen dengan pembagian subnet efisien, otomasi
+                distribusi IP, serta prosedur diagnostik gangguan.
               </p>
+              <button type="button" class="case-toggle" aria-expanded="false">
+                <span data-i18n="btn_case_open">Rincian Arsitektur</span>
+                <svg class="chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="case-details" hidden>
+                <div class="case-grid">
+                  <div>
+                    <h4 data-i18n="case_prob_label">Permasalahan</h4>
+                    <p data-i18n="proj2_prob">Jaringan skala beberapa divisi yang berada dalam satu broadcast domain
+                      tunggal rentan mengalami tabrakan IP statis dan sulit dilacak saat terjadi putus koneksi.</p>
+                  </div>
+                  <div>
+                    <h4 data-i18n="case_sol_label">Pendekatan &amp; Logika Teknis</h4>
+                    <p data-i18n="proj2_sol">Menghitung alokasi blok IPv4 sesuai kapasitas tiap segmen, menghubungkan
+                      antar-jaringan melalui perutean LAN/WAN, mengaktifkan DHCP pool terpusat dan resolusi nama DNS,
+                      lalu memvalidasi jalur paket end-to-end.</p>
+                  </div>
+                </div>
+              </div>
             </article>
 
+            <!-- Case Study 3 -->
             <article class="work-item" data-category="backend">
               <div class="work-top">
-                <h3 data-i18n="proj3_title">Web Portfolio Pribadi</h3>
-                <span class="mono work-stack">HTML · CSS · JavaScript</span>
+                <div>
+                  <span class="mono case-domain">REST Service &amp; Frontend</span>
+                  <h3 data-i18n="proj3_title">Layanan API Node.js &amp; Web Portfolio Statis Berperforma Tinggi</h3>
+                </div>
+                <span class="mono work-stack">Node.js · Vanilla JS · GitHub API</span>
               </div>
-              <p data-i18n="proj3_desc">
-                Situs dokumentasi profil, riwayat organisasi, dan repositori kode sumber yang dirancang ringan tanpa framework dan di-deploy melalui GitHub &amp; Netlify.
+              <p class="work-summary" data-i18n="proj3_desc">
+                Eksplorasi komunikasi data asinkron berbasis JSON di Node.js serta pengembangan web portofolio mandiri
+                tanpa beban library eksternal dengan alur CI/CD otomatis ke Netlify.
               </p>
+              <button type="button" class="case-toggle" aria-expanded="false">
+                <span data-i18n="btn_case_open">Rincian Arsitektur</span>
+                <svg class="chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="case-details" hidden>
+                <div class="case-grid">
+                  <div>
+                    <h4 data-i18n="case_prob_label">Permasalahan</h4>
+                    <p data-i18n="proj3_prob">Banyak situs portofolio menjadi lambat di perangkat seluler akibat
+                      ketergantungan framework besar dan harus di-build ulang setiap ada pembaruan repositori GitHub.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 data-i18n="case_sol_label">Pendekatan &amp; Logika Teknis</h4>
+                    <p data-i18n="proj3_sol">Menggunakan HTML/CSS/JS murni berarsitektur modular, menarik data
+                      repositori secara dinamis lewat GitHub REST API menggunakan async/await, dan menghubungkan branch
+                      utama GitHub langsung ke pipeline produksi Netlify.</p>
+                  </div>
+                </div>
+              </div>
             </article>
           </div>
 
           <div class="github-index">
             <div class="github-index-head">
-              <h3 data-i18n="gh_heading">Repositori Publik GitHub</h3>
-              <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer" class="mono link-underline">
+              <h3 data-i18n="gh_heading">Sinkronisasi Repositori GitHub</h3>
+              <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer"
+                class="mono link-underline">
                 github.com/AlvianFathan6305 <span class="ext-arrow">↗</span>
               </a>
             </div>
@@ -370,19 +564,94 @@
       </div>
     </section>
 
-    <!-- ==================== 05. KONTAK & SOSIAL MEDIA ==================== -->
-    <section class="section-block" id="contact">
+    <!-- ==================== 05. MATRIKS KEAHLIAN INTERAKTIF ==================== -->
+    <section class="section-block" id="skills">
       <div class="container split-grid">
         <div class="section-label reveal">
           <span class="section-num">05</span>
+          <h2 data-i18n="sec_skills">Peta Keahlian</h2>
+          <p class="label-hint" data-i18n="skill_hint">Pilih salah satu keahlian untuk melihat konteks penggunaannya
+            secara spesifik.</p>
+        </div>
+
+        <div class="section-content reveal">
+          <div class="skill-detail-box" id="skillDetailBox" aria-live="polite">
+            <div class="skill-detail-head">
+              <span class="skill-detail-name" id="skillDetailName">Laravel</span>
+              <span class="mono skill-detail-cat" id="skillDetailCat">Backend &amp; Web</span>
+            </div>
+            <p class="skill-detail-desc" id="skillDetailDesc">
+              Digunakan untuk membangun backend aplikasi web berpola MVC, autentikasi pengguna, routing endpoint, dan
+              integrasi database MySQL.
+            </p>
+          </div>
+
+          <div class="spec-table">
+            <div class="spec-row">
+              <div class="spec-title" data-i18n="skill_cat1">Backend &amp; Web</div>
+              <div class="spec-items">
+                <button type="button" class="skill-pill active" data-skill="Laravel"
+                  data-cat="Backend & Web">Laravel</button>
+                <button type="button" class="skill-pill" data-skill="Node.js" data-cat="Backend & Web">Node.js</button>
+                <button type="button" class="skill-pill" data-skill="MySQL" data-cat="Database">MySQL</button>
+                <button type="button" class="skill-pill" data-skill="SQL" data-cat="Database">SQL</button>
+                <button type="button" class="skill-pill" data-skill="HTML5 & CSS3" data-cat="Frontend">HTML5 &amp;
+                  CSS3</button>
+                <button type="button" class="skill-pill" data-skill="JavaScript"
+                  data-cat="Frontend / Logic">JavaScript</button>
+                <button type="button" class="skill-pill" data-skill="Git" data-cat="Workflow">Git &amp; GitHub</button>
+              </div>
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-title" data-i18n="skill_cat2">Jaringan Komputer</div>
+              <div class="spec-items">
+                <button type="button" class="skill-pill" data-skill="TCP/IP" data-cat="Networking">TCP/IP</button>
+                <button type="button" class="skill-pill" data-skill="LAN / WAN" data-cat="Networking">LAN / WAN</button>
+                <button type="button" class="skill-pill" data-skill="DNS" data-cat="Network Services">DNS</button>
+                <button type="button" class="skill-pill" data-skill="DHCP" data-cat="Network Services">DHCP</button>
+                <button type="button" class="skill-pill" data-skill="Troubleshooting" data-cat="Diagnostics">Network
+                  Troubleshooting</button>
+              </div>
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-title" data-i18n="skill_cat3">Manajerial &amp; Tim</div>
+              <div class="spec-items">
+                <button type="button" class="skill-pill" data-skill="Leadership"
+                  data-cat="Governance">Leadership</button>
+                <button type="button" class="skill-pill" data-skill="Teamwork"
+                  data-cat="Collaboration">Teamwork</button>
+                <button type="button" class="skill-pill" data-skill="Communication"
+                  data-cat="Collaboration">Communication</button>
+                <button type="button" class="skill-pill" data-skill="Problem Solving" data-cat="Analytical">Problem
+                  Solving</button>
+                <button type="button" class="skill-pill" data-skill="Time Management" data-cat="Execution">Time
+                  Management</button>
+                <button type="button" class="skill-pill" data-skill="Event Management" data-cat="Operations">Event
+                  Management</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 06. KONTAK & DISKUSI ==================== -->
+    <section class="section-block" id="contact">
+      <div class="container split-grid">
+        <div class="section-label reveal">
+          <span class="section-num">06</span>
           <h2 data-i18n="sec_contact">Kontak</h2>
         </div>
 
         <div class="section-content reveal">
           <div class="contact-layout">
             <div class="contact-details">
+              <h3 class="contact-heading" data-i18n="contact_heading">Mari Berdiskusi</h3>
               <p class="contact-intro" data-i18n="contact_intro">
-                Untuk keperluan magang, diskusi proyek web/jaringan, atau kerja sama kegiatan, silakan hubungi saya melalui email, WhatsApp, atau kanal media sosial berikut.
+                Saya terbuka untuk kesempatan magang (internship), posisi junior di bidang Backend / Jaringan Komputer,
+                maupun kolaborasi proyek web. Pesan dari formulir di samping akan langsung terkirim ke inbox email saya.
               </p>
 
               <dl class="directory-list">
@@ -395,46 +664,54 @@
                 </div>
                 <div class="dir-row">
                   <dt>WhatsApp</dt>
-                  <dd><a href="https://wa.me/6289629970741" target="_blank" rel="noopener noreferrer">+62 896-2997-0741 <span class="ext-arrow">↗</span></a></dd>
-                </div>
-                <div class="dir-row">
-                  <dt>Instagram</dt>
-                  <dd><a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank" rel="noopener noreferrer">@alvianfathann <span class="ext-arrow">↗</span></a></dd>
-                </div>
-                <div class="dir-row">
-                  <dt>GitHub</dt>
-                  <dd><a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer">AlvianFathan6305 <span class="ext-arrow">↗</span></a></dd>
-                </div>
-                <div class="dir-row">
-                  <dt>TikTok</dt>
-                  <dd><a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank" rel="noopener noreferrer">@alvianfathan <span class="ext-arrow">↗</span></a></dd>
+                  <dd><a href="https://wa.me/6289629970741" target="_blank" rel="noopener noreferrer">+62 896-2997-0741
+                      <span class="ext-arrow">↗</span></a></dd>
                 </div>
                 <div class="dir-row">
                   <dt>LinkedIn</dt>
-                  <dd><a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer">in/alvianrizkyafathan <span class="ext-arrow">↗</span></a></dd>
+                  <dd><a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank"
+                      rel="noopener noreferrer">in/alvianrizkyafathan <span class="ext-arrow">↗</span></a></dd>
+                </div>
+                <div class="dir-row">
+                  <dt>GitHub</dt>
+                  <dd><a href="https://github.com/AlvianFathan6305" target="_blank"
+                      rel="noopener noreferrer">AlvianFathan6305 <span class="ext-arrow">↗</span></a></dd>
+                </div>
+                <div class="dir-row">
+                  <dt>Instagram</dt>
+                  <dd><a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr"
+                      target="_blank" rel="noopener noreferrer">@alvianfathann <span class="ext-arrow">↗</span></a></dd>
+                </div>
+                <div class="dir-row">
+                  <dt>TikTok</dt>
+                  <dd><a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank"
+                      rel="noopener noreferrer">@alvianfathan <span class="ext-arrow">↗</span></a></dd>
                 </div>
               </dl>
             </div>
 
-            <form class="clean-form" id="contactForm" action="https://formsubmit.co/alvianfathan6305@gmail.com" name="portfolio-contact" method="POST" data-netlify="true">
+            <form class="clean-form" id="contactForm" action="https://formsubmit.co/alvianfathan6305@gmail.com"
+              name="portfolio-contact" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="portfolio-contact" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
               <div class="field">
-                <label for="senderName" data-i18n="form_name">Nama</label>
-                <input type="text" id="senderName" name="name" required />
+                <label for="senderName" data-i18n="form_name">Nama Lengkap</label>
+                <input type="text" id="senderName" name="name" placeholder="Nama / Instansi Anda" required />
               </div>
               <div class="field">
-                <label for="senderEmail" data-i18n="form_email">Email</label>
-                <input type="email" id="senderEmail" name="email" required />
+                <label for="senderEmail" data-i18n="form_email">Alamat Email</label>
+                <input type="email" id="senderEmail" name="email" placeholder="nama@perusahaan.com" required />
               </div>
               <div class="field">
-                <label for="senderSubject" data-i18n="form_subject">Subjek</label>
-                <input type="text" id="senderSubject" name="subject" required />
+                <label for="senderSubject" data-i18n="form_subject">Subjek Keperluan</label>
+                <input type="text" id="senderSubject" name="subject"
+                  placeholder="Tawaran Internship / Kolaborasi Proyek" required />
               </div>
               <div class="field">
                 <label for="senderMessage" data-i18n="form_msg">Pesan</label>
-                <textarea id="senderMessage" name="message" rows="4" required></textarea>
+                <textarea id="senderMessage" name="message" rows="4" placeholder="Tuliskan pesan singkat Anda..."
+                  required></textarea>
               </div>
               <button type="submit" class="btn btn-solid" data-i18n="form_submit">Kirim Pesan</button>
               <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
@@ -448,11 +725,12 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="currentYear">2026</span> Alvian Rizkya Fathan</span>
+      <span>© <span id="currentYear">2026</span> Alvian Rizkya Fathan · Jakarta Selatan</span>
       <a href="mailto:alvianfathan6305@gmail.com" class="mono footer-mail">alvianfathan6305@gmail.com</a>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
