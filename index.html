@@ -15,15 +15,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23111110'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='42' fill='%23f4f3ef'>AF</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23141b1f'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='42' fill='%2365b8a3'>AF</text></svg>" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Subtle Top Reading Progress -->
+  <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+
   <!-- ==================== HEADER ==================== -->
   <header class="site-header" id="navbar">
     <div class="container header-inner">
-      <a href="#home" class="brand">Alvianfathan</a>
+      <a href="#home" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Alvianfathan</span>
+      </a>
 
       <nav aria-label="Navigasi Utama">
         <ul class="nav-links" id="navLinks">
@@ -36,10 +42,10 @@
       </nav>
 
       <div class="header-controls">
-        <button class="text-btn" id="langToggle" type="button" aria-label="Ganti Bahasa">
+        <button class="text-btn" id="langToggle" type="button" aria-label="Ganti Bahasa" title="ID / EN">
           <span id="langLabel">ID</span>
         </button>
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="Ganti Tema">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Ganti Tema Warna" title="Mode Gelap / Hangat Terang">
           <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
@@ -67,16 +73,21 @@
     <!-- ==================== HERO ==================== -->
     <section class="hero">
       <div class="container hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero_eyebrow">Jakarta Selatan, Indonesia · Teknik Informatika</p>
+        <div class="hero-copy reveal">
+          <div class="eyebrow-wrap">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p class="eyebrow" data-i18n="hero_eyebrow">Jakarta Selatan, Indonesia · Teknik Informatika</p>
+          </div>
+
           <h1 class="hero-name">Alvian Rizkya Fathan</h1>
+
           <p class="hero-lead" data-i18n="hero_lead">
             Mahasiswa Teknik Informatika di <em>Universitas Mercu Buana</em> yang mendalami pengembangan backend, aplikasi web, dan jaringan komputer, sekaligus aktif berorganisasi di DPM dan BEM Fasilkom.
           </p>
 
           <div class="hero-actions">
-            <a href="assets/CV-Alvian-Rizkya-Fathan.pdf" download="CV-Alvian-Rizkya-Fathan.pdf" class="btn btn-solid" data-i18n="btn_cv">
-              Unduh CV (PDF)
+            <a href="assets/CV-Alvian-Rizkya-Fathan.pdf" download="CV-Alvian-Rizkya-Fathan.pdf" class="btn btn-solid">
+              <span data-i18n="btn_cv">Unduh CV (PDF)</span>
             </a>
             <a href="#contact" class="btn btn-ghost" data-i18n="btn_contact">
               Hubungi Saya
@@ -85,24 +96,24 @@
 
           <ul class="inline-socials" aria-label="Tautan Media Sosial">
             <li>
-              <a href="mailto:alvianfathan6305@gmail.com">alvianfathan6305@gmail.com ↗</a>
+              <a href="mailto:alvianfathan6305@gmail.com">alvianfathan6305@gmail.com <span class="ext-arrow">↗</span></a>
             </li>
             <li>
-              <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer">GitHub <span class="ext-arrow">↗</span></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer">LinkedIn <span class="ext-arrow">↗</span></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              <a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram <span class="ext-arrow">↗</span></a>
             </li>
             <li>
-              <a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+              <a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank" rel="noopener noreferrer">TikTok <span class="ext-arrow">↗</span></a>
             </li>
           </ul>
         </div>
 
-        <figure class="hero-portrait">
+        <figure class="hero-portrait reveal">
           <div class="portrait-wrap">
             <img src="assets/profile.jpg?v=2" alt="Alvian Rizkya Fathan" loading="eager" />
           </div>
@@ -112,17 +123,37 @@
           </figcaption>
         </figure>
       </div>
+
+      <!-- Subtle Interactive Metrics Strip -->
+      <div class="container metrics-strip reveal">
+        <div class="metric-item">
+          <span class="metric-val" data-count="3.64" data-decimals="2">3.64</span>
+          <span class="metric-label" data-i18n="stat_gpa">IPK Saat Ini (skala 4.00)</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val" data-count="15" data-suffix="+">15+</span>
+          <span class="metric-label" data-i18n="stat_team">Anggota Panitia Pemilu Dipimpin</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val" data-count="10" data-suffix="+">10+</span>
+          <span class="metric-label" data-i18n="stat_prog">Program Kerja Diawasi di DPM</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val" data-count="200" data-suffix="+">200+</span>
+          <span class="metric-label" data-i18n="stat_event">Peserta Event Didukung</span>
+        </div>
+      </div>
     </section>
 
     <!-- ==================== 01. PROFIL & PENDIDIKAN ==================== -->
     <section class="section-block" id="about">
       <div class="container split-grid">
-        <div class="section-label">
+        <div class="section-label reveal">
           <span class="section-num">01</span>
           <h2 data-i18n="sec_about">Profil &amp; Pendidikan</h2>
         </div>
 
-        <div class="section-content">
+        <div class="section-content reveal">
           <div class="prose">
             <p data-i18n="about_p1">
               Saya menempuh studi S1 Teknik Informatika di Universitas Mercu Buana sejak 2023. Fokus utama saya berada pada pembuatan sistem di sisi server (backend), pengelolaan basis data relasional, serta instalasi dan pemecahan masalah jaringan komputer.
@@ -132,13 +163,13 @@
             </p>
           </div>
 
-          <div class="edu-block">
+          <div class="edu-card">
             <div class="edu-header">
               <div>
                 <h3>Universitas Mercu Buana</h3>
                 <p class="edu-sub" data-i18n="edu_degree">Sarjana Teknik Informatika (S1) — IPK 3.64 / 4.00</p>
               </div>
-              <span class="mono meta-date" data-i18n="edu_period">Sep 2023 – Sep 2027 (Target)</span>
+              <span class="mono badge-soft" data-i18n="edu_period">Sep 2023 – Sep 2027 (Target)</span>
             </div>
             <ul class="clean-list">
               <li data-i18n="edu_pt1">Mengembangkan aplikasi berbasis web menggunakan bahasa pemrograman dan kerangka kerja modern.</li>
@@ -154,108 +185,120 @@
     <!-- ==================== 02. RIWAYAT ORGANISASI ==================== -->
     <section class="section-block" id="organization">
       <div class="container split-grid">
-        <div class="section-label">
+        <div class="section-label reveal">
           <span class="section-num">02</span>
           <h2 data-i18n="sec_org">Riwayat Organisasi</h2>
         </div>
 
         <div class="section-content">
-          <div class="experience-list">
+          <div class="experience-timeline">
             <!-- DPM -->
-            <article class="exp-item">
-              <div class="exp-meta">
-                <span class="mono" data-i18n="dpm_date">Sep 2025 – Sekarang</span>
-                <span>Jakarta, Indonesia</span>
+            <article class="exp-card reveal">
+              <div class="exp-dot current" aria-hidden="true"></div>
+              <div class="exp-top">
+                <div>
+                  <h3>DPM Fasilkom Mercu Buana</h3>
+                  <p class="exp-role" data-i18n="dpm_role">Staff of Supervision Division · Ketua Pelaksana Pemilu Raya 2026</p>
+                </div>
+                <div class="exp-meta">
+                  <span class="mono badge-active" data-i18n="dpm_date">Sep 2025 – Sekarang</span>
+                  <span class="exp-loc">Jakarta, Indonesia</span>
+                </div>
               </div>
-              <div class="exp-body">
-                <h3>DPM Fasilkom Mercu Buana</h3>
-                <p class="exp-role" data-i18n="dpm_role">Staff of Supervision Division · Ketua Pelaksana Pemilu Raya 2026</p>
-                <ul class="clean-list">
-                  <li data-i18n="dpm_pt1">
-                    Memantau dan mengevaluasi lebih dari 10 program kerja organisasi mahasiswa agar berjalan sesuai regulasi yang berlaku.
-                  </li>
-                  <li data-i18n="dpm_pt2">
-                    Mengawasi pelaksanaan lebih dari 10 kegiatan kemahasiswaan serta memberikan catatan evaluasi untuk perbaikan program.
-                  </li>
-                  <li data-i18n="dpm_pt3">
-                    Menjabat sebagai Ketua Pelaksana Pemilu Raya 2026 (Chairperson of the 2026 General Election Committee), memimpin lebih dari 15 anggota panitia dari tahap perencanaan hingga pelaksanaan pemilihan mahasiswa.
-                  </li>
-                </ul>
-              </div>
+              <ul class="clean-list">
+                <li data-i18n="dpm_pt1">
+                  Memantau dan mengevaluasi lebih dari 10 program kerja organisasi mahasiswa agar berjalan sesuai regulasi yang berlaku.
+                </li>
+                <li data-i18n="dpm_pt2">
+                  Mengawasi pelaksanaan lebih dari 10 kegiatan kemahasiswaan serta memberikan catatan evaluasi untuk perbaikan program.
+                </li>
+                <li data-i18n="dpm_pt3">
+                  Menjabat sebagai Ketua Pelaksana Pemilu Raya 2026 (Chairperson of the 2026 General Election Committee), memimpin lebih dari 15 anggota panitia dari tahap perencanaan hingga pelaksanaan pemilihan mahasiswa.
+                </li>
+              </ul>
             </article>
 
             <!-- BEM -->
-            <article class="exp-item">
-              <div class="exp-meta">
-                <span class="mono">Sep 2024 – Sep 2025</span>
-                <span>Jakarta, Indonesia</span>
+            <article class="exp-card reveal">
+              <div class="exp-dot" aria-hidden="true"></div>
+              <div class="exp-top">
+                <div>
+                  <h3>BEM Fasilkom Mercu Buana</h3>
+                  <p class="exp-role" data-i18n="bem_role">Staff of Student Interests and Talents Department</p>
+                </div>
+                <div class="exp-meta">
+                  <span class="mono badge-soft">Sep 2024 – Sep 2025</span>
+                  <span class="exp-loc">Jakarta, Indonesia</span>
+                </div>
               </div>
-              <div class="exp-body">
-                <h3>BEM Fasilkom Mercu Buana</h3>
-                <p class="exp-role" data-i18n="bem_role">Staff of Student Interests and Talents Department</p>
-                <ul class="clean-list">
-                  <li data-i18n="bem_pt1">
-                    Mengkoordinasikan lebih dari 5 kegiatan mahasiswa yang berkaitan dengan penyaluran minat, bakat, dan kreativitas.
-                  </li>
-                  <li data-i18n="bem_pt2">
-                    Bekerja sama dengan Highschoolfest 2024 sebagai media partner sekaligus relawan operasional acara yang diikuti lebih dari 200 peserta.
-                  </li>
-                  <li data-i18n="bem_pt3">
-                    Berkolaborasi dengan lebih dari 10 rekan panitia dan perwakilan organisasi mahasiswa dalam menyelenggarakan agenda fakultas.
-                  </li>
-                </ul>
-              </div>
+              <ul class="clean-list">
+                <li data-i18n="bem_pt1">
+                  Mengkoordinasikan lebih dari 5 kegiatan mahasiswa yang berkaitan dengan penyaluran minat, bakat, dan kreativitas.
+                </li>
+                <li data-i18n="bem_pt2">
+                  Bekerja sama dengan Highschoolfest 2024 sebagai media partner sekaligus relawan operasional acara yang diikuti lebih dari 200 peserta.
+                </li>
+                <li data-i18n="bem_pt3">
+                  Berkolaborasi dengan lebih dari 10 rekan panitia dan perwakilan organisasi mahasiswa dalam menyelenggarakan agenda fakultas.
+                </li>
+              </ul>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== 03. KEAHLIAN ==================== -->
+    <!-- ==================== 03. KEAHLIAN INTERAKTIF ==================== -->
     <section class="section-block" id="skills">
       <div class="container split-grid">
-        <div class="section-label">
+        <div class="section-label reveal">
           <span class="section-num">03</span>
           <h2 data-i18n="sec_skills">Keahlian</h2>
+          <p class="label-hint" data-i18n="skill_hint">Ketuk item keahlian untuk melihat detail penerapannya.</p>
         </div>
 
-        <div class="section-content">
+        <div class="section-content reveal">
+          <div class="skill-detail-box" id="skillDetailBox" aria-live="polite">
+            <span class="skill-detail-name" id="skillDetailName">Laravel</span>
+            <p class="skill-detail-desc" id="skillDetailDesc">
+              Digunakan untuk membangun backend aplikasi web berpola MVC, autentikasi pengguna, routing endpoint, dan integrasi database MySQL.
+            </p>
+          </div>
+
           <div class="spec-table">
             <div class="spec-row">
               <div class="spec-title" data-i18n="skill_cat1">Backend &amp; Web</div>
               <div class="spec-items">
-                <span>Laravel</span>
-                <span>Node.js</span>
-                <span>MySQL</span>
-                <span>SQL</span>
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Git</span>
+                <button type="button" class="skill-pill active" data-skill="Laravel">Laravel</button>
+                <button type="button" class="skill-pill" data-skill="Node.js">Node.js</button>
+                <button type="button" class="skill-pill" data-skill="MySQL">MySQL</button>
+                <button type="button" class="skill-pill" data-skill="SQL">SQL</button>
+                <button type="button" class="skill-pill" data-skill="HTML5 & CSS3">HTML5 &amp; CSS3</button>
+                <button type="button" class="skill-pill" data-skill="JavaScript">JavaScript</button>
+                <button type="button" class="skill-pill" data-skill="Git">Git &amp; GitHub</button>
               </div>
             </div>
 
             <div class="spec-row">
               <div class="spec-title" data-i18n="skill_cat2">Jaringan Komputer</div>
               <div class="spec-items">
-                <span>TCP/IP</span>
-                <span>LAN / WAN</span>
-                <span>DNS</span>
-                <span>DHCP</span>
-                <span>Network Configuration</span>
-                <span>Troubleshooting</span>
+                <button type="button" class="skill-pill" data-skill="TCP/IP">TCP/IP</button>
+                <button type="button" class="skill-pill" data-skill="LAN / WAN">LAN / WAN</button>
+                <button type="button" class="skill-pill" data-skill="DNS">DNS</button>
+                <button type="button" class="skill-pill" data-skill="DHCP">DHCP</button>
+                <button type="button" class="skill-pill" data-skill="Troubleshooting">Network Troubleshooting</button>
               </div>
             </div>
 
             <div class="spec-row">
               <div class="spec-title" data-i18n="skill_cat3">Non-Teknis &amp; Organisasi</div>
               <div class="spec-items">
-                <span>Leadership</span>
-                <span>Teamwork</span>
-                <span>Communication</span>
-                <span>Problem Solving</span>
-                <span>Time Management</span>
-                <span>Event Management</span>
+                <button type="button" class="skill-pill" data-skill="Leadership">Leadership</button>
+                <button type="button" class="skill-pill" data-skill="Teamwork">Teamwork</button>
+                <button type="button" class="skill-pill" data-skill="Communication">Communication</button>
+                <button type="button" class="skill-pill" data-skill="Problem Solving">Problem Solving</button>
+                <button type="button" class="skill-pill" data-skill="Time Management">Time Management</button>
+                <button type="button" class="skill-pill" data-skill="Event Management">Event Management</button>
               </div>
             </div>
           </div>
@@ -266,19 +309,19 @@
     <!-- ==================== 04. PROYEK & GITHUB ==================== -->
     <section class="section-block" id="projects">
       <div class="container split-grid">
-        <div class="section-label">
+        <div class="section-label reveal">
           <span class="section-num">04</span>
           <h2 data-i18n="sec_projects">Proyek &amp; Kode</h2>
         </div>
 
-        <div class="section-content">
+        <div class="section-content reveal">
           <div class="filter-bar" role="tablist" aria-label="Filter Proyek">
             <button class="filter-tab active" data-filter="all" type="button" data-i18n="filter_all">Semua</button>
             <button class="filter-tab" data-filter="backend" type="button">Backend &amp; Web</button>
             <button class="filter-tab" data-filter="network" type="button">Networking</button>
           </div>
 
-          <div class="work-list">
+          <div class="work-list" id="workList">
             <article class="work-item" data-category="backend">
               <div class="work-top">
                 <h3 data-i18n="proj1_title">Pengembangan Aplikasi Web &amp; Basis Data</h3>
@@ -314,7 +357,7 @@
             <div class="github-index-head">
               <h3 data-i18n="gh_heading">Repositori Publik GitHub</h3>
               <a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer" class="mono link-underline">
-                github.com/AlvianFathan6305 ↗
+                github.com/AlvianFathan6305 <span class="ext-arrow">↗</span>
               </a>
             </div>
             <div class="repo-list" id="githubReposGrid">
@@ -330,12 +373,12 @@
     <!-- ==================== 05. KONTAK & SOSIAL MEDIA ==================== -->
     <section class="section-block" id="contact">
       <div class="container split-grid">
-        <div class="section-label">
+        <div class="section-label reveal">
           <span class="section-num">05</span>
           <h2 data-i18n="sec_contact">Kontak</h2>
         </div>
 
-        <div class="section-content">
+        <div class="section-content reveal">
           <div class="contact-layout">
             <div class="contact-details">
               <p class="contact-intro" data-i18n="contact_intro">
@@ -345,27 +388,30 @@
               <dl class="directory-list">
                 <div class="dir-row">
                   <dt>Email</dt>
-                  <dd><a href="mailto:alvianfathan6305@gmail.com">alvianfathan6305@gmail.com ↗</a></dd>
+                  <dd class="email-actions">
+                    <a href="mailto:alvianfathan6305@gmail.com">alvianfathan6305@gmail.com</a>
+                    <button type="button" class="copy-chip" id="copyEmailBtn" data-i18n="btn_copy">Salin</button>
+                  </dd>
                 </div>
                 <div class="dir-row">
                   <dt>WhatsApp</dt>
-                  <dd><a href="https://wa.me/6289629970741" target="_blank" rel="noopener noreferrer">+62 896-2997-0741 ↗</a></dd>
+                  <dd><a href="https://wa.me/6289629970741" target="_blank" rel="noopener noreferrer">+62 896-2997-0741 <span class="ext-arrow">↗</span></a></dd>
                 </div>
                 <div class="dir-row">
                   <dt>Instagram</dt>
-                  <dd><a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank" rel="noopener noreferrer">@alvianfathann ↗</a></dd>
+                  <dd><a href="https://www.instagram.com/alvianfathann?avpt=Y3BlZzB1amZqYXNq&utm_source=qr" target="_blank" rel="noopener noreferrer">@alvianfathann <span class="ext-arrow">↗</span></a></dd>
                 </div>
                 <div class="dir-row">
                   <dt>GitHub</dt>
-                  <dd><a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer">AlvianFathan6305 ↗</a></dd>
+                  <dd><a href="https://github.com/AlvianFathan6305" target="_blank" rel="noopener noreferrer">AlvianFathan6305 <span class="ext-arrow">↗</span></a></dd>
                 </div>
                 <div class="dir-row">
                   <dt>TikTok</dt>
-                  <dd><a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank" rel="noopener noreferrer">@alvianfathan ↗</a></dd>
+                  <dd><a href="https://www.tiktok.com/@alvianfathan?_r=1&_t=ZS-9Bipgiedj2S" target="_blank" rel="noopener noreferrer">@alvianfathan <span class="ext-arrow">↗</span></a></dd>
                 </div>
                 <div class="dir-row">
                   <dt>LinkedIn</dt>
-                  <dd><a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer">in/alvianrizkyafathan ↗</a></dd>
+                  <dd><a href="https://www.linkedin.com/in/alvianrizkyafathan" target="_blank" rel="noopener noreferrer">in/alvianrizkyafathan <span class="ext-arrow">↗</span></a></dd>
                 </div>
               </dl>
             </div>
@@ -403,7 +449,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© <span id="currentYear">2026</span> Alvian Rizkya Fathan</span>
-      <a href="mailto:alvianfathan6305@gmail.com" class="mono">alvianfathan6305@gmail.com</a>
+      <a href="mailto:alvianfathan6305@gmail.com" class="mono footer-mail">alvianfathan6305@gmail.com</a>
     </div>
   </footer>
 

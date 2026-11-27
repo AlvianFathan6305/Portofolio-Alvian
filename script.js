@@ -13,6 +13,10 @@
         "Mahasiswa Teknik Informatika di <em>Universitas Mercu Buana</em> yang mendalami pengembangan backend, aplikasi web, dan jaringan komputer, sekaligus aktif berorganisasi di DPM dan BEM Fasilkom.",
       btn_cv: "Unduh CV (PDF)",
       btn_contact: "Hubungi Saya",
+      stat_gpa: "IPK Saat Ini (skala 4.00)",
+      stat_team: "Anggota Panitia Pemilu Dipimpin",
+      stat_prog: "Program Kerja Diawasi di DPM",
+      stat_event: "Peserta Event Didukung",
       sec_about: "Profil & Pendidikan",
       about_p1:
         "Saya menempuh studi S1 Teknik Informatika di Universitas Mercu Buana sejak 2023. Fokus utama saya berada pada pembuatan sistem di sisi server (backend), pengelolaan basis data relasional, serta instalasi dan pemecahan masalah jaringan komputer.",
@@ -41,6 +45,7 @@
       bem_pt3:
         "Berkolaborasi dengan lebih dari 10 rekan panitia dan perwakilan organisasi mahasiswa dalam menyelenggarakan agenda fakultas.",
       sec_skills: "Keahlian",
+      skill_hint: "Ketuk item keahlian untuk melihat detail penerapannya.",
       skill_cat1: "Backend & Web",
       skill_cat2: "Jaringan Komputer",
       skill_cat3: "Non-Teknis & Organisasi",
@@ -59,6 +64,7 @@
       sec_contact: "Kontak",
       contact_intro:
         "Untuk keperluan magang, diskusi proyek web/jaringan, atau kerja sama kegiatan, silakan hubungi saya melalui email, WhatsApp, atau kanal media sosial berikut.",
+      btn_copy: "Salin",
       form_name: "Nama",
       form_email: "Email",
       form_subject: "Subjek",
@@ -76,6 +82,10 @@
         "Undergraduate Informatics Engineering student at <em>Universitas Mercu Buana</em> focusing on backend systems, web applications, and computer networking, with active organizational roles in DPM and BEM Fasilkom.",
       btn_cv: "Download CV (PDF)",
       btn_contact: "Get in Touch",
+      stat_gpa: "Current GPA (out of 4.00)",
+      stat_team: "Election Committee Members Led",
+      stat_prog: "Student Org Programs Supervised",
+      stat_event: "Event Participants Supported",
       sec_about: "Profile & Education",
       about_p1:
         "I have been pursuing a Bachelor's degree in Informatics Engineering at Universitas Mercu Buana since 2023. My primary focus is building server-side web applications, designing relational databases, and configuring computer networks.",
@@ -104,6 +114,7 @@
       bem_pt3:
         "Worked with 10+ committee members and student organization representatives to successfully conduct events and programs.",
       sec_skills: "Skills",
+      skill_hint: "Click any skill below to inspect how I apply it.",
       skill_cat1: "Backend & Web",
       skill_cat2: "Computer Networking",
       skill_cat3: "Soft Skills",
@@ -122,6 +133,7 @@
       sec_contact: "Contact",
       contact_intro:
         "For internship opportunities, backend/networking project discussions, or organizational collaborations, feel free to reach out via email, WhatsApp, or social channels.",
+      btn_copy: "Copy",
       form_name: "Name",
       form_email: "Email",
       form_subject: "Subject",
@@ -130,10 +142,87 @@
     }
   };
 
+  // Interactive Skill Descriptions (ID & EN)
+  const skillDescriptions = {
+    Laravel: {
+      id: "Digunakan untuk membangun backend aplikasi web berpola MVC, autentikasi pengguna, routing endpoint, dan integrasi database MySQL.",
+      en: "Used to build MVC web backends, user authentication flows, clean routing, and relational MySQL database integration."
+    },
+    "Node.js": {
+      id: "Lingkungan runtime JavaScript sisi server untuk membuat layanan API ringan, pengelolaan request asinkron, dan logika aplikasi web.",
+      en: "Server-side JavaScript runtime used for lightweight REST APIs, asynchronous request handling, and backend logic."
+    },
+    MySQL: {
+      id: "Perancangan skema tabel relasional, foreign key, normalisasi data, serta optimasi penyimpanan data pada proyek aplikasi web.",
+      en: "Relational database schema design, normalization, foreign-key integrity, and structured data persistence for web apps."
+    },
+    SQL: {
+      id: "Penulisan query terstruktur (JOIN, agregasi, filtering, dan sub-query) untuk pengolahan maupun pelaporan data aplikasi.",
+      en: "Structured querying (JOINs, aggregations, filtering, and subqueries) to retrieve and analyze application data."
+    },
+    "HTML5 & CSS3": {
+      id: "Penyusunan struktur semantik halaman web dan tata letak responsif yang nyaman diakses baik di layar desktop maupun handphone.",
+      en: "Semantic markup and responsive layouts engineered for clarity and comfort across desktop and mobile screens."
+    },
+    JavaScript: {
+      id: "Pengembangan antarmuka interaktif berbasis DOM, integrasi REST API (fetch), serta validasi formulir tanpa ketergantungan library berat.",
+      en: "DOM-driven UI interactivity, asynchronous REST API integration, and client-side state handling in plain ES6+."
+    },
+    Git: {
+      id: "Pengelolaan versi kode sumber, kolaborasi repositori di GitHub, serta alur deployment otomatis ke Netlify.",
+      en: "Source version control, GitHub repository management, and continuous deployment pipelines connected to Netlify."
+    },
+    "TCP/IP": {
+      id: "Pemahaman model lapisan protokol jaringan, pengalamatan IPv4, subnetting, dan analisis komunikasi paket antarpiranti.",
+      en: "Practical understanding of IPv4 addressing, subnetting, packet routing, and core transport/network layer protocols."
+    },
+    "LAN / WAN": {
+      id: "Perancangan dan simulasi topologi jaringan lokal maupun antarsegmen menggunakan switch dan router.",
+      en: "Design and configuration of local and wide-area network topologies across switches, routers, and segmented subnets."
+    },
+    DNS: {
+      id: "Konfigurasi sistem resolusi nama domain ke alamat IP serta pengelolaan record domain pada server maupun layanan hosting.",
+      en: "Configuration of domain name resolution services and DNS records across local lab servers and cloud hosts."
+    },
+    DHCP: {
+      id: "Pengaturan distribusi alamat IP dinamis, gateway, dan alokasi IP pool otomatis bagi perangkat klien di dalam jaringan.",
+      en: "Automated IP pool allocation, default gateway assignment, and lease management for networked client devices."
+    },
+    Troubleshooting: {
+      id: "Identifikasi kendala konektivitas jaringan menggunakan pengujian ping, traceroute, pemeriksaan tabel routing, dan verifikasi konfigurasi.",
+      en: "Systematic diagnosis of connectivity issues through ping, route inspection, interface checks, and IP verification."
+    },
+    Leadership: {
+      id: "Teruji memimpin 15+ anggota panitia sebagai Ketua Pelaksana Pemilu Raya Fasilkom 2026 dari perencanaan hingga hari pemilihan.",
+      en: "Proven by leading 15+ committee members as Chairperson of the 2026 Student General Election from planning to execution."
+    },
+    Teamwork: {
+      id: "Terbiasa bekerja lintas divisi bersama rekan kepanitiaan, pengurus BEM, DPM, dan perwakilan himpunan mahasiswa.",
+      en: "Experienced collaborating across student departments, committees, and faculty organization representatives."
+    },
+    Communication: {
+      id: "Menyampaikan hasil evaluasi pengawasan program kerja di DPM serta menjembatani koordinasi pihak internal maupun media partner.",
+      en: "Clear reporting of program evaluations at DPM and effective coordination with internal teams and external partners."
+    },
+    "Problem Solving": {
+      id: "Menyelesaikan kendala teknis kode/jaringan maupun kendala operasional lapangan secara terstruktur dan tenang.",
+      en: "Methodical troubleshooting across both technical debugging/networking labs and live organizational operations."
+    },
+    "Time Management": {
+      id: "Menjaga keseimbangan antara target akademik Teknik Informatika (IPK 3.64) dengan tanggung jawab aktif di organisasi fakultas.",
+      en: "Balancing Informatics Engineering coursework (3.64 GPA) alongside active leadership responsibilities in DPM & BEM."
+    },
+    "Event Management": {
+      id: "Mengkoordinasikan 5+ agenda minat bakat mahasiswa serta mendukung operasional acara dengan lebih dari 200 peserta.",
+      en: "Coordinating 5+ student talent programs and supporting live event operations for 200+ participants."
+    }
+  };
+
   const htmlEl = document.documentElement;
   let currentLang = localStorage.getItem("alvian_lang") || "id";
+  let activeSkill = "Laravel";
 
-  // Theme Toggle
+  // 1. Theme Toggle
   const themeToggle = document.getElementById("themeToggle");
   const iconSun = document.getElementById("iconSun");
   const iconMoon = document.getElementById("iconMoon");
@@ -151,7 +240,33 @@
     applyTheme(htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark");
   });
 
-  // Language Toggle
+  // 2. Interactive Skill Pills Explorer
+  const skillDetailBox = document.getElementById("skillDetailBox");
+  const skillDetailName = document.getElementById("skillDetailName");
+  const skillDetailDesc = document.getElementById("skillDetailDesc");
+  const skillPills = document.querySelectorAll(".skill-pill");
+
+  function renderSkillDetail(skillKey) {
+    activeSkill = skillKey;
+    const info = skillDescriptions[skillKey];
+    if (!info || !skillDetailName || !skillDetailDesc) return;
+    skillDetailBox.style.opacity = "0.45";
+    setTimeout(() => {
+      skillDetailName.textContent = skillKey;
+      skillDetailDesc.textContent = info[currentLang] || info.id;
+      skillDetailBox.style.opacity = "1";
+    }, 90);
+  }
+
+  skillPills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      skillPills.forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+      renderSkillDetail(pill.getAttribute("data-skill"));
+    });
+  });
+
+  // 3. Language Toggle
   const langToggle = document.getElementById("langToggle");
   const langLabel = document.getElementById("langLabel");
 
@@ -166,6 +281,10 @@
       const key = el.getAttribute("data-i18n");
       if (dict[key]) el.innerHTML = dict[key];
     });
+
+    if (skillDescriptions[activeSkill]) {
+      skillDetailDesc.textContent = skillDescriptions[activeSkill][lang];
+    }
   }
   applyLanguage(currentLang);
 
@@ -173,11 +292,12 @@
     applyLanguage(currentLang === "id" ? "en" : "id");
   });
 
-  // Mobile Menu & Active Section
+  // 4. Mobile Menu, Reading Progress Bar & Active Section Spy
   const menuToggle = document.getElementById("menuToggle");
   const iconMenu = document.getElementById("iconMenu");
   const iconClose = document.getElementById("iconClose");
   const navLinks = document.getElementById("navLinks");
+  const scrollBar = document.getElementById("scrollBar");
   const sections = document.querySelectorAll("main section[id]");
 
   function setMenuOpen(isOpen) {
@@ -210,9 +330,15 @@
   window.addEventListener(
     "scroll",
     () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollBar) {
+        scrollBar.style.width = docHeight > 0 ? `${(scrollTop / docHeight) * 100}%` : "0%";
+      }
+
       let activeId = "";
       sections.forEach((sec) => {
-        if (window.scrollY >= sec.offsetTop - 140) {
+        if (scrollTop >= sec.offsetTop - 160) {
           activeId = sec.id;
         }
       });
@@ -223,7 +349,51 @@
     { passive: true }
   );
 
-  // Project Filter
+  // 5. Smooth Scroll Reveal & Metric Counter Animation
+  const revealEls = document.querySelectorAll(".reveal");
+  let countersAnimated = false;
+
+  function runCounters() {
+    if (countersAnimated) return;
+    countersAnimated = true;
+    document.querySelectorAll(".metric-val").forEach((el) => {
+      const target = parseFloat(el.getAttribute("data-count"));
+      const decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+      const suffix = el.getAttribute("data-suffix") || "";
+      const duration = 1100;
+      const start = performance.now();
+
+      function step(now) {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = `${(target * eased).toFixed(decimals)}${suffix}`;
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            if (entry.target.classList.contains("metrics-strip")) {
+              runCounters();
+            }
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
+
+  // 6. Smooth Project Category Filter
   const filterTabs = document.querySelectorAll(".filter-tab");
   const workItems = document.querySelectorAll(".work-item");
 
@@ -232,14 +402,42 @@
       filterTabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
       const filter = tab.getAttribute("data-filter");
+
       workItems.forEach((item) => {
         const show = filter === "all" || item.getAttribute("data-category") === filter;
-        item.style.display = show ? "block" : "none";
+        if (show) {
+          item.style.display = "block";
+          requestAnimationFrame(() => {
+            item.style.opacity = "1";
+            item.style.transform = "translateY(0)";
+          });
+        } else {
+          item.style.display = "none";
+          item.style.opacity = "0";
+        }
       });
     });
   });
 
-  // GitHub Repositories Index
+  // 7. One-Click Copy Email Button
+  const copyEmailBtn = document.getElementById("copyEmailBtn");
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("alvianfathan6305@gmail.com");
+        copyEmailBtn.classList.add("copied");
+        copyEmailBtn.textContent = currentLang === "id" ? "Tersalin ✓" : "Copied ✓";
+        setTimeout(() => {
+          copyEmailBtn.classList.remove("copied");
+          copyEmailBtn.textContent = translations[currentLang].btn_copy;
+        }, 2000);
+      } catch {
+        window.location.href = "mailto:alvianfathan6305@gmail.com";
+      }
+    });
+  }
+
+  // 8. GitHub Repositories Index
   const githubGrid = document.getElementById("githubReposGrid");
 
   async function loadGitHubRepos() {
@@ -288,7 +486,7 @@
   }
   loadGitHubRepos();
 
-  // Contact Form (Direct to alvianfathan6305@gmail.com via FormSubmit + Netlify Forms backup + Mailto fallback)
+  // 9. Contact Form (Direct to alvianfathan6305@gmail.com via FormSubmit + Netlify Forms backup)
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
 
@@ -307,16 +505,14 @@
     const message = formData.get("message");
 
     try {
-      // 1. Save backup to Netlify Forms when hosted on Netlify (non-blocking)
       if (window.location.hostname.endsWith("netlify.app") || window.location.protocol.startsWith("http")) {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString()
-        }).catch(() => { });
+        }).catch(() => {});
       }
 
-      // 2. Send directly to Gmail inbox (alvianfathan6305@gmail.com)
       const res = await fetch("https://formsubmit.co/ajax/alvianfathan6305@gmail.com", {
         method: "POST",
         headers: {
